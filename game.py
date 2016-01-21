@@ -1,6 +1,6 @@
 from player import Player
 from deck import deck
-from character import Character
+from character import *
 from utils import *
 
 class Game:
@@ -20,17 +20,14 @@ class Game:
                 player.get_general_income()
                 player.print_status()
                 self.income_stage(player)
-                player.character.special_ability(player)
+                player.character.special_ability()
                 player.print_status()
                 self.build_stage(player)
                 player.print_status()
                 print()
 
     def character_stage(self, player, possible_characters):
-        question = ""
-        possibilities = range(len(possible_characters))
-        for i, char in enumerate(possible_characters):
-            question += char + "(press " + str(i) + ") "
+        question, possibilities = generate_question(possible_characters)
         while True:
             choice = input(question)
             try:
@@ -38,9 +35,10 @@ class Game:
                 if choice in possibilities:
                     char = possible_characters[choice]
                     possible_characters.remove(char)
-                    player.character = Character(char)
+                    player.character = eval(char)(player)
                     break
-            except TypeError:
+            except TypeError as e:
+                print("Error!", e)
                 continue
 
     def income_stage(self, player):

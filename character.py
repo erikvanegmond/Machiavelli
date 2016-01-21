@@ -8,48 +8,147 @@ class Character:
                   'Architect',
                   'Warlord']
 
-    def __init__(self, character):
+    def __init__(self, character, player):
         if character in self.characters:
             self.character = character
         else:
             raise NameError
-        pass
+        self.player = player
 
     def __repr__(self):
         return self.character
 
     def get_color(self):
-        if self.character == 'Assassin':
-            return 'grey'
-        elif self.character == 'Thief':
-            return 'grey'
-        elif self.character == 'Magician':
-            return 'grey'
-        elif self.character == 'King':
-            return 'yellow'
-        elif self.character == 'Bishop':
-            return 'blue'
-        elif self.character == 'Merchant':
-            return 'green'
-        elif self.character == 'Architect':
-            return 'grey'
-        elif self.character == 'Warlord':
-            return 'red'
+        return "grey"
 
-    def special_ability(self, player):
-        if self.character == 'Assassin':
-            print("Kills another character (not implemented yet)")
-        elif self.character == 'Thief':
-            print("Steals from another character (not implemented yet)")
-        elif self.character == 'Magician':
-            print("Swaps cards (not implemented yet)")
-        elif self.character == 'King':
-            print(" (not implemented yet)")
-        elif self.character == 'Bishop':
-            print("protected against Warlord (not implemented yet)")
-        elif self.character == 'Merchant':
-            player.gold += 1
-        elif self.character == 'Architect':
-            player.draw_cards(2)
-        elif self.character == 'Warlord':
-            print("may destroy a building (not implemented yet)")
+    def special_ability(self):
+        pass
+
+
+class Assassin(Character):
+    def __init__(self, player):
+        self.player = player
+
+    def special_ability(self):
+        """
+        Should be able to kill another character
+        :return:
+        """
+        pass
+
+    def __repr__(self):
+        return "Assassin"
+
+
+class Thief(Character):
+    def __init__(self, player):
+        self.player = player
+
+    def special_ability(self):
+        """
+        Should be able to steal from another character
+        :return:
+        """
+        pass
+
+    def __repr__(self):
+        return "Thief"
+
+
+class Magician(Character):
+    def __init__(self, player):
+        self.player = player
+
+    def special_ability(self):
+        """
+        Should be able to swap cards with another character
+        :return:
+        """
+        pass
+
+    def __repr__(self):
+        return "Magician"
+
+
+class King(Character):
+    def __init__(self, player):
+        self.player = player
+
+    def special_ability(self):
+        """
+        Is starting player the next turn
+        :return:
+        """
+        pass
+
+    def get_color(self):
+        return "yellow"
+
+    def __repr__(self):
+        return "King"
+
+
+class Bishop(Character):
+    def __init__(self, player):
+        self.player = player
+
+    def special_ability(self):
+        """
+        protected against condottiere
+        :return:
+        """
+        pass
+
+    def get_color(self):
+        return "blue"
+
+    def __repr__(self):
+        return "Bishop"
+
+
+class Merchant(Character):
+    def __init__(self, player):
+        self.player = player
+
+    def special_ability(self):
+        print("got gold")
+        self.player.gold += 1
+
+    def get_color(self):
+        return "green"
+
+    def __repr__(self):
+        return "Merchant"
+
+
+class Architect(Character):
+    def __init__(self, player):
+        self.player = player
+
+    def special_ability(self):
+        """
+        Recieves two building cards
+        :return:
+        """
+        self.player.draw_cards(2)
+
+    def __repr__(self):
+        return "Architect"
+
+
+class Warlord(Character):
+    def __init__(self, player):
+        self.player = player
+
+    def special_ability(self):
+        """
+        Can destroy a building from another player
+        :return:
+        """
+
+    def get_color(self):
+        return "red"
+
+    def __repr__(self):
+        return "Warlord"
+

@@ -34,6 +34,8 @@ class Player:
                 self.gold += 1
 
     def print_status(self):
+        print("character:", self.character)
         print("hand:", self.hand)
         print("city:", self.city)
         print("gold", self.gold)
+
