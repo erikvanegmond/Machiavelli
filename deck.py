@@ -26,7 +26,7 @@ class Deck:
         with open(deck_file) as f:
             deck_list = json.load(f)
             for card in deck_list:
-                self.deck.append(Card(card['name'], card['cost'], card['color'], card['worth'], card['special']))
+                self.deck.append(Card(card['name'], card['cost'], card['color'], card['worth'], card['special_ability']))
         random.shuffle(self.deck)
         # self.deck.reverse()
 deck = Deck()

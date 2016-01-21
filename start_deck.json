@@ -1,642 +1,642 @@
 [
   {
-    "cost": 1,
+    "special_ability": null,
     "name": "Wachttoren",
-    "special": null,
     "color": "red",
     "worth": 1,
+    "cost": 1,
     "description": null
   },
   {
-    "cost": 1,
+    "special_ability": null,
     "name": "Wachttoren",
-    "special": null,
     "color": "red",
     "worth": 1,
+    "cost": 1,
     "description": null
   },
   {
-    "cost": 1,
+    "special_ability": null,
     "name": "Wachttoren",
-    "special": null,
     "color": "red",
     "worth": 1,
+    "cost": 1,
     "description": null
   },
   {
-    "cost": 2,
+    "special_ability": null,
     "name": "Gevangenis",
-    "special": null,
     "color": "red",
     "worth": 2,
+    "cost": 2,
     "description": null
   },
   {
-    "cost": 2,
+    "special_ability": null,
     "name": "Gevangenis",
-    "special": null,
     "color": "red",
     "worth": 2,
+    "cost": 2,
     "description": null
   },
   {
-    "cost": 2,
+    "special_ability": null,
     "name": "Gevangenis",
-    "special": null,
     "color": "red",
     "worth": 2,
+    "cost": 2,
     "description": null
   },
   {
-    "cost": 3,
+    "special_ability": null,
     "name": "Toernooiveld",
-    "special": null,
     "color": "red",
     "worth": 3,
+    "cost": 3,
     "description": null
   },
   {
-    "cost": 3,
+    "special_ability": null,
     "name": "Toernooiveld",
-    "special": null,
     "color": "red",
     "worth": 3,
+    "cost": 3,
     "description": null
   },
   {
-    "cost": 3,
+    "special_ability": null,
     "name": "Toernooiveld",
-    "special": null,
     "color": "red",
     "worth": 3,
+    "cost": 3,
     "description": null
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Burcht",
-    "special": null,
     "color": "red",
     "worth": 5,
+    "cost": 5,
     "description": null
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Burcht",
-    "special": null,
     "color": "red",
     "worth": 5,
-    "description": null
-  },
-  {
-    "cost": 1,
-    "name": "Taveerne",
-    "special": null,
-    "color": "green",
-    "worth": 1,
-    "description": null
-  },
-  {
-    "cost": 1,
-    "name": "Taveerne",
-    "special": null,
-    "color": "green",
-    "worth": 1,
-    "description": null
-  },
-  {
-    "cost": 1,
-    "name": "Taveerne",
-    "special": null,
-    "color": "green",
-    "worth": 1,
-    "description": null
-  },
-  {
-    "cost": 1,
-    "name": "Taveerne",
-    "special": null,
-    "color": "green",
-    "worth": 1,
-    "description": null
-  },
-  {
-    "cost": 1,
-    "name": "Taveerne",
-    "special": null,
-    "color": "green",
-    "worth": 1,
-    "description": null
-  },
-  {
-    "cost": 2,
-    "name": "Winkels",
-    "special": null,
-    "color": "green",
-    "worth": 2,
-    "description": null
-  },
-  {
-    "cost": 2,
-    "name": "Winkels",
-    "special": null,
-    "color": "green",
-    "worth": 2,
-    "description": null
-  },
-  {
-    "cost": 2,
-    "name": "Winkels",
-    "special": null,
-    "color": "green",
-    "worth": 2,
-    "description": null
-  },
-  {
-    "cost": 2,
-    "name": "Markt",
-    "special": null,
-    "color": "green",
-    "worth": 2,
-    "description": null
-  },
-  {
-    "cost": 2,
-    "name": "Markt",
-    "special": null,
-    "color": "green",
-    "worth": 2,
-    "description": null
-  },
-  {
-    "cost": 2,
-    "name": "Markt",
-    "special": null,
-    "color": "green",
-    "worth": 2,
-    "description": null
-  },
-  {
-    "cost": 2,
-    "name": "Markt",
-    "special": null,
-    "color": "green",
-    "worth": 2,
-    "description": null
-  },
-  {
-    "cost": 3,
-    "name": "Handelshuis",
-    "special": null,
-    "color": "green",
-    "worth": 3,
-    "description": null
-  },
-  {
-    "cost": 3,
-    "name": "Handelshuis",
-    "special": null,
-    "color": "green",
-    "worth": 3,
-    "description": null
-  },
-  {
-    "cost": 3,
-    "name": "Handelshuis",
-    "special": null,
-    "color": "green",
-    "worth": 3,
-    "description": null
-  },
-  {
-    "cost": 4,
-    "name": "Haven",
-    "special": null,
-    "color": "green",
-    "worth": 4,
-    "description": null
-  },
-  {
-    "cost": 4,
-    "name": "Haven",
-    "special": null,
-    "color": "green",
-    "worth": 4,
-    "description": null
-  },
-  {
-    "cost": 4,
-    "name": "Haven",
-    "special": null,
-    "color": "green",
-    "worth": 4,
-    "description": null
-  },
-  {
     "cost": 5,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Taveerne",
+    "color": "green",
+    "worth": 1,
+    "cost": 1,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Taveerne",
+    "color": "green",
+    "worth": 1,
+    "cost": 1,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Taveerne",
+    "color": "green",
+    "worth": 1,
+    "cost": 1,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Taveerne",
+    "color": "green",
+    "worth": 1,
+    "cost": 1,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Taveerne",
+    "color": "green",
+    "worth": 1,
+    "cost": 1,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Winkels",
+    "color": "green",
+    "worth": 2,
+    "cost": 2,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Winkels",
+    "color": "green",
+    "worth": 2,
+    "cost": 2,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Winkels",
+    "color": "green",
+    "worth": 2,
+    "cost": 2,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Markt",
+    "color": "green",
+    "worth": 2,
+    "cost": 2,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Markt",
+    "color": "green",
+    "worth": 2,
+    "cost": 2,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Markt",
+    "color": "green",
+    "worth": 2,
+    "cost": 2,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Markt",
+    "color": "green",
+    "worth": 2,
+    "cost": 2,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Handelshuis",
+    "color": "green",
+    "worth": 3,
+    "cost": 3,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Handelshuis",
+    "color": "green",
+    "worth": 3,
+    "cost": 3,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Handelshuis",
+    "color": "green",
+    "worth": 3,
+    "cost": 3,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Haven",
+    "color": "green",
+    "worth": 4,
+    "cost": 4,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Haven",
+    "color": "green",
+    "worth": 4,
+    "cost": 4,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Haven",
+    "color": "green",
+    "worth": 4,
+    "cost": 4,
+    "description": null
+  },
+  {
+    "special_ability": null,
     "name": "Raadhuis",
-    "special": null,
     "color": "green",
     "worth": 5,
+    "cost": 5,
     "description": null
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Raadhuis",
-    "special": null,
     "color": "green",
     "worth": 5,
-    "description": null
-  },
-  {
-    "cost": 1,
-    "name": "Tempel",
-    "special": null,
-    "color": "blue",
-    "worth": 1,
-    "description": null
-  },
-  {
-    "cost": 1,
-    "name": "Tempel",
-    "special": null,
-    "color": "blue",
-    "worth": 1,
-    "description": null
-  },
-  {
-    "cost": 1,
-    "name": "Tempel",
-    "special": null,
-    "color": "blue",
-    "worth": 1,
-    "description": null
-  },
-  {
-    "cost": 2,
-    "name": "Kerk",
-    "special": null,
-    "color": "blue",
-    "worth": 2,
-    "description": null
-  },
-  {
-    "cost": 2,
-    "name": "Kerk",
-    "special": null,
-    "color": "blue",
-    "worth": 2,
-    "description": null
-  },
-  {
-    "cost": 2,
-    "name": "Kerk",
-    "special": null,
-    "color": "blue",
-    "worth": 2,
-    "description": null
-  },
-  {
-    "cost": 3,
-    "name": "Klooster",
-    "special": null,
-    "color": "blue",
-    "worth": 3,
-    "description": null
-  },
-  {
-    "cost": 3,
-    "name": "Klooster",
-    "special": null,
-    "color": "blue",
-    "worth": 3,
-    "description": null
-  },
-  {
-    "cost": 3,
-    "name": "Klooster",
-    "special": null,
-    "color": "blue",
-    "worth": 3,
-    "description": null
-  },
-  {
     "cost": 5,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Tempel",
+    "color": "blue",
+    "worth": 1,
+    "cost": 1,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Tempel",
+    "color": "blue",
+    "worth": 1,
+    "cost": 1,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Tempel",
+    "color": "blue",
+    "worth": 1,
+    "cost": 1,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Kerk",
+    "color": "blue",
+    "worth": 2,
+    "cost": 2,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Kerk",
+    "color": "blue",
+    "worth": 2,
+    "cost": 2,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Kerk",
+    "color": "blue",
+    "worth": 2,
+    "cost": 2,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Klooster",
+    "color": "blue",
+    "worth": 3,
+    "cost": 3,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Klooster",
+    "color": "blue",
+    "worth": 3,
+    "cost": 3,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Klooster",
+    "color": "blue",
+    "worth": 3,
+    "cost": 3,
+    "description": null
+  },
+  {
+    "special_ability": null,
     "name": "Kathedraal",
-    "special": null,
     "color": "blue",
     "worth": 5,
+    "cost": 5,
     "description": null
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Kathedraal",
-    "special": null,
     "color": "blue",
     "worth": 5,
-    "description": null
-  },
-  {
-    "cost": 3,
-    "name": "Landgoed",
-    "special": null,
-    "color": "yellow",
-    "worth": 3,
-    "description": null
-  },
-  {
-    "cost": 3,
-    "name": "Landgoed",
-    "special": null,
-    "color": "yellow",
-    "worth": 3,
-    "description": null
-  },
-  {
-    "cost": 3,
-    "name": "Landgoed",
-    "special": null,
-    "color": "yellow",
-    "worth": 3,
-    "description": null
-  },
-  {
-    "cost": 3,
-    "name": "Landgoed",
-    "special": null,
-    "color": "yellow",
-    "worth": 3,
-    "description": null
-  },
-  {
-    "cost": 3,
-    "name": "Landgoed",
-    "special": null,
-    "color": "yellow",
-    "worth": 3,
-    "description": null
-  },
-  {
-    "cost": 4,
-    "name": "Kasteel",
-    "special": null,
-    "color": "yellow",
-    "worth": 4,
-    "description": null
-  },
-  {
-    "cost": 4,
-    "name": "Kasteel",
-    "special": null,
-    "color": "yellow",
-    "worth": 4,
-    "description": null
-  },
-  {
-    "cost": 4,
-    "name": "Kasteel",
-    "special": null,
-    "color": "yellow",
-    "worth": 4,
-    "description": null
-  },
-  {
-    "cost": 4,
-    "name": "Kasteel",
-    "special": null,
-    "color": "yellow",
-    "worth": 4,
-    "description": null
-  },
-  {
     "cost": 5,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Landgoed",
+    "color": "yellow",
+    "worth": 3,
+    "cost": 3,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Landgoed",
+    "color": "yellow",
+    "worth": 3,
+    "cost": 3,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Landgoed",
+    "color": "yellow",
+    "worth": 3,
+    "cost": 3,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Landgoed",
+    "color": "yellow",
+    "worth": 3,
+    "cost": 3,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Landgoed",
+    "color": "yellow",
+    "worth": 3,
+    "cost": 3,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Kasteel",
+    "color": "yellow",
+    "worth": 4,
+    "cost": 4,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Kasteel",
+    "color": "yellow",
+    "worth": 4,
+    "cost": 4,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Kasteel",
+    "color": "yellow",
+    "worth": 4,
+    "cost": 4,
+    "description": null
+  },
+  {
+    "special_ability": null,
+    "name": "Kasteel",
+    "color": "yellow",
+    "worth": 4,
+    "cost": 4,
+    "description": null
+  },
+  {
+    "special_ability": null,
     "name": "Paleis",
-    "special": null,
     "color": "yellow",
     "worth": 5,
+    "cost": 5,
     "description": null
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Paleis",
-    "special": null,
     "color": "yellow",
     "worth": 5,
+    "cost": 5,
     "description": null
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Paleis",
-    "special": null,
     "color": "yellow",
     "worth": 5,
+    "cost": 5,
     "description": null
   },
   {
-    "cost": 0,
+    "special_ability": null,
     "name": "Armenhuis",
-    "special": null,
     "color": "purple",
     "worth": 0,
+    "cost": 0,
     "description": "Als je aan het einde van je beurt geen goud bezit, ontvang je 1 goudstuk van de bank."
   },
   {
-    "cost": 2,
+    "special_ability": null,
     "name": "Hof der Wonderen",
-    "special": null,
     "color": "purple",
     "worth": 2,
+    "cost": 2,
     "description": "Bij het tellen van de overwinningspunten mag je het Hof der Wonderen als een bouwerk met een kleur naar keuze benoemen"
   },
   {
-    "cost": 3,
+    "special_ability": null,
     "name": "Kerker",
-    "special": null,
     "color": "purple",
     "worth": 3,
+    "cost": 3,
     "description": "De kerker kan niet door de Condottiere verwoest worden."
   },
   {
-    "cost": 3,
+    "special_ability": null,
     "name": "Kerker",
-    "special": null,
     "color": "purple",
     "worth": 3,
+    "cost": 3,
     "description": "De kerker kan niet door de Condottiere verwoest worden."
   },
   {
-    "cost": 3,
+    "special_ability": null,
     "name": "Vuurtoren",
-    "special": null,
     "color": "purple",
     "worth": 3,
+    "cost": 3,
     "description": "Op het moment dat je de Vuurtoren bouwt, mag je eenmalig de stapel gebouwenkaarten doorzoeken en er een van in je hand nemen. Schud daarna de stapel."
   },
   {
-    "cost": 3,
+    "special_ability": null,
     "name": "Kruittoren",
-    "special": null,
     "color": "purple",
     "worth": 3,
+    "cost": 3,
     "description": "Je mag tegelijkertijd de Kruittoren en een gebouw van een medespeler naar keuze opblazen."
   },
   {
-    "cost": 4,
+    "special_ability": null,
     "name": "Museum",
-    "special": null,
     "color": "purple",
     "worth": 4,
+    "cost": 4,
     "description": "Je mag in elk van je beurten een van je gebouwenkaarten onder het Museum schuiven. Aan het einde van het spel krijg je voor elke kaart 1 extra overwinningspunt."
   },
   {
-    "cost": 4,
+    "special_ability": null,
     "name": "Schatkamer",
-    "special": null,
     "color": "purple",
     "worth": 4,
+    "cost": 4,
     "description": "Aan het einde van het spel krijg je 1 extra overwinningspunt voor elk goudstuk in je bezit"
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Kerkhof",
-    "special": null,
     "color": "purple",
     "worth": 5,
+    "cost": 5,
     "description": "Als de Condottiere een gebouw verwoest, dan mag je een goudstuk betalen om die bouwkaart in de hand te nemen. Je mag dit echter niet doen als je zelf de Condottiere bent."
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Wensput",
-    "special": null,
     "color": "purple",
     "worth": 5,
+    "cost": 5,
     "description": "Aan het einde van eht spel krijg je 1 extra overwinninspunt voor elk ander lila gebouw"
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Casino",
-    "special": null,
     "color": "purple",
     "worth": 5,
+    "cost": 5,
     "description": "Aan het einde van het spel krijg je 1 extra overwinningspunt voor elke kaard, die je in je hand hebt."
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Observatorium",
-    "special": null,
     "color": "purple",
     "worth": 5,
+    "cost": 5,
     "description": "Als je aan het begin van je beurt voor een bouwkaart kiest, dan mag je er 3 trekken en er vervolgens 1 uitkiezen en beide andere onder de trekstaple leggen"
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Laboratorium",
-    "special": null,
     "color": "purple",
     "worth": 5,
+    "cost": 5,
     "description": "Gedurende je beurt mag je eenmal een bouwkaart afleggen. Je krijgt daarvoor een goudstuk terug."
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Fabriek",
-    "special": null,
     "color": "purple",
     "worth": 5,
+    "cost": 5,
     "description": "Het bouwen van elk volgend lila gebouw is voor jou 1 goudstuk goedkoper"
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Werkplaats",
-    "special": null,
     "color": "purple",
     "worth": 5,
+    "cost": 5,
     "description": "Je mag tijdens je beurt eenmaal 3 goudstukken betalen om 2 bouwkaarten te trekken"
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Klokkentoren",
-    "special": null,
     "color": "purple",
     "worth": 5,
+    "cost": 5,
     "description": "Op het moment dat je de Klokkentoren bouwt, moet je beslissen of het spel al na het 7e gebouw eindigt. Als de klokkentoren wordt vernietigd, eindigt het spel na het bouwen van het 8e gebouw"
   },
   {
-    "cost": 5,
+    "special_ability": null,
     "name": "Steengroeve",
-    "special": null,
     "color": "purple",
     "worth": 5,
+    "cost": 5,
     "description": "Betaal 1 goudstuk minder voor elk volgend gelijk gebouw. "
   },
   {
-    "cost": 6,
+    "special_ability": null,
     "name": "Troonzaal",
-    "special": null,
     "color": "purple",
     "worth": 6,
+    "cost": 6,
     "description": "Je ontvankt elke keer dat de koning van speler wisseld een goudstuk van de bank"
   },
   {
-    "cost": 6,
+    "special_ability": null,
     "name": "Balzaal",
-    "special": null,
     "color": "purple",
     "worth": 6,
+    "cost": 6,
     "description": "Als je de houten koning bezit moet iedere medespele, die door jou opgeroepen wordt, antwoorden met 'Dank u wel Exellentie' Wie dit niet doet verliest zijn complete beurt"
   },
   {
-    "cost": 6,
+    "special_ability": null,
     "name": "Grote muur",
-    "special": null,
     "color": "purple",
     "worth": 6,
+    "cost": 6,
     "description": "De Condottiere moet 1 goudstuk meer betalen als hij een van jou gebouwen vernietigt"
   },
   {
-    "cost": 6,
+    "special_ability": null,
     "name": "Hospitaal",
-    "special": null,
     "color": "purple",
     "worth": 6,
+    "cost": 6,
     "description": "Als je vermoord word mag je desondanks je inkomen incasseren. Daarna is je beurt afgelopen"
   },
   {
-    "cost": 6,
+    "special_ability": null,
     "name": "Park",
-    "special": null,
     "color": "purple",
     "worth": 6,
+    "cost": 6,
     "description": "Als je aan het einde van je beurt geen kaarten meer hebt, mag je 2 kaarten van de stapel trekken"
   },
   {
-    "cost": 6,
+    "special_ability": null,
     "name": "School voor magiers",
-    "special": null,
     "color": "purple",
     "worth": 6,
+    "cost": 6,
     "description": "Tijdens de inkomstenfasen neemt de School voor magiers een kleur naar keuze aan. Je krijgt derhalve een goudstuk als je de Koning, de Prediker, de Koopman of de Condottiere bent."
   },
   {
-    "cost": 6,
+    "special_ability": null,
     "name": "Bibiotheek",
-    "special": null,
     "color": "purple",
     "worth": 6,
+    "cost": 6,
     "description": "Als je aan het begin van je beurt kaarten trekt, mag je ze beide houden."
   },
   {
-    "cost": 6,
+    "special_ability": null,
     "name": "Universiteit",
-    "special": null,
     "color": "purple",
     "worth": 8,
+    "cost": 6,
     "description": "Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"
   },
   {
-    "cost": 6,
+    "special_ability": null,
     "name": "Drakenpoort",
-    "special": null,
     "color": "purple",
     "worth": 8,
+    "cost": 6,
     "description": "Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"
   }
 ]

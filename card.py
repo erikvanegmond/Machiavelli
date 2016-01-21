@@ -24,4 +24,4 @@ class Card:
 
     def get_dict(self):
         return {'name': self.name, 'cost': self.cost, 'worth': self.worth, 'color': self.color,
-                'special': self.special_ability, 'description': self.description}
+                'special_ability': self.special_ability, 'description': self.description}
