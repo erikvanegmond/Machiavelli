@@ -13,4 +13,5 @@ while True:
     print("you can only play with 2 to 7 players")
 
 game = Game(n_players)
-game.run()
+while True:
+    game.run()

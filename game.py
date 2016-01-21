@@ -2,29 +2,57 @@ from player import Player
 from deck import deck
 from character import *
 from utils import *
+from game_states import *
+
 
 class Game:
-    players = []  # this means you can only play one game at the time, this variable is static (i think)
-
     def __init__(self, n_players):
-        for _ in range(n_players):
-            self.players.append(Player())
+        self.players = []
+        self.state = GameStates.start_game
+        self.n_players = n_players
+        self.current_player = 0
+        self.possible_characters = []
 
     def run(self):
-        for _ in range(3):
-            possible_characters = Character.characters[:]
-            for i, player in enumerate(self.players):
-                print("player", i)
-                player.print_status()
-                self.character_stage(player, possible_characters)
-                player.get_general_income()
-                player.print_status()
-                self.income_stage(player)
-                player.character.special_ability()
-                player.print_status()
-                self.build_stage(player)
-                player.print_status()
-                print()
+        print(self.state)
+        player = Player
+        if not self.state is GameStates.start_game:
+            player = self.players[self.current_player]
+            player.print_status()
+
+        if self.state == GameStates.start_game:
+            # add players
+            for i in range(self.n_players):
+                player_name = "player %d" % i
+                self.players.append(Player(name=player_name))
+            self.state = self.state.next()
+            self.possible_characters = Character.characters[:]
+        elif self.state == GameStates.rounds_pick_characters:
+            self.character_stage(player, self.possible_characters)
+            self.current_player = (self.current_player + 1) % self.n_players
+            if not self.current_player:
+                self.state = self.state.next()
+        elif self.state == GameStates.turns_begin:
+            self.state = self.state.next()
+        elif self.state == GameStates.turns_income:
+            self.income_stage(player)
+            self.state = self.state.next()
+        elif self.state == GameStates.turns_general:
+            print(player.get_turn_options())
+            self.state = self.state.next()
+        elif self.state == GameStates.turns_end:
+            self.current_player = (self.current_player + 1) % self.n_players
+            if not self.current_player:
+                for player in self.players:
+                    player.character = None
+                self.possible_characters = Character.characters[:]
+                self.state = GameStates.rounds_pick_characters
+            else:
+                self.state = GameStates.turns_begin
+
+        else:
+            print("Unknown state")
+
 
     def character_stage(self, player, possible_characters):
         question, possibilities = generate_question(possible_characters)

@@ -1,12 +1,13 @@
 from deck import *
-
+import character
 
 class Player:
-    def __init__(self):
+    def __init__(self, name=""):
         self.gold = 2
         self.hand = []
         self.city = []
-        self.character = ""
+        self.character = character.Character
+        self.name = name
 
         self.draw_cards(4)
 
@@ -33,9 +34,19 @@ class Player:
             if building.color == color:
                 self.gold += 1
 
+    def get_turn_options(self):
+        options = []
+        if self.hand:
+            options.append("build")
+        special = self.character.special_abilities()
+        if special:
+            options += special
+        return options
+
     def print_status(self):
-        print("character:", self.character)
-        print("hand:", self.hand)
-        print("city:", self.city)
-        print("gold", self.gold)
+        print("  name:", self.name)
+        print("  character:", self.character)
+        print("  hand:", self.hand)
+        print("  city:", self.city)
+        print("  gold", self.gold)
 
