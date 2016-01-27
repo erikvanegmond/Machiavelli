@@ -5,6 +5,7 @@ import unittest
 
 class TestCharacter(unittest.TestCase):
     def test_all_characters(self):
+        player.deck.read_deck()
         for char in Character.characters:
             actual_response = eval(char)(player.Player()).__repr__()
             correct_response = char

@@ -1,7 +1,9 @@
 from deck import *
 import character
 
+
 class Player:
+
     def __init__(self, name=""):
         self.gold = 2
         self.hand = []
@@ -50,3 +52,13 @@ class Player:
         print("  city:", self.city)
         print("  gold", self.gold)
 
+    def __repr__(self):
+        return self.name
+
+    def __eq__(self, other):
+        if hasattr(self, 'name') and hasattr(other, 'name'):
+            return self.name == other.name
+        elif not hasattr(self, 'name') and not hasattr(other, 'name'):
+            return False
+        else:
+            return False
