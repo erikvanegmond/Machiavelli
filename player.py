@@ -55,6 +55,9 @@ class Player:
     def __repr__(self):
         return self.name
 
+    def __str__(self):
+        return self.name
+
     def __eq__(self, other):
         if hasattr(self, 'name') and hasattr(other, 'name'):
             return self.name == other.name
