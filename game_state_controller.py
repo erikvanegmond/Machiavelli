@@ -26,7 +26,7 @@ class GameStateController:
         self.chosen_characters = []
         # TODO Just default, maybe allow for creating your own deck with the expansion
         self.character_deck = [eval(char) for char in Character.characters]  # Character.characters[:]
-        self.character_deck.sort(key=lambda x: x.character_number) # make sure they are sorted
+        self.character_deck.sort(key=lambda x: x.character_number)  # make sure they are sorted
 
     def add_player(self, player):
         if self.state is GameStates.start_game and len(self.players) < self.n_players:
@@ -47,8 +47,8 @@ class GameStateController:
                     player_order.append(player)
             return player_order
         else:
-            print("state",self.state)
-            print("order",order)
+            print("state", self.state)
+            print("order", order)
             raise TypeError
 
     def get_player_with_character(self, check_character):
@@ -77,14 +77,13 @@ class GameStateController:
             self.player_order = self.get_player_order()
             self.state = GameStates.turns_call_character
         elif self.state == GameStates.turns_call_character:
-            print(self.player_order)
             if self.player_order:
                 next_player = self.player_order[0]
                 self.player_order.pop(0)
                 self.current_player = next_player
                 self.state = GameStates.turns_begin
             else:
-                print("no more characters left")
+                self.state = GameStates.rounds_pick_characters_prepare
         elif self.state == GameStates.turns_begin:
             self.state = GameStates.turns_income
         elif self.state == GameStates.turns_income:
