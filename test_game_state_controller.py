@@ -58,7 +58,6 @@ class TestGameStateController(unittest.TestCase):
         correct_result = [Player("Player 4"), Player("Player 2"), Player("Player 1"), Player("Player 3")]
         self.assertEqual(actual_result, correct_result)
 
-
     def test_update_state(self):
         deck.read_deck()  # resetting the deck
         gsc = GameStateController(4)
@@ -67,8 +66,6 @@ class TestGameStateController(unittest.TestCase):
         gsc.add_player("Player 2")
         gsc.add_player("Player 3")
         gsc.add_player("Player 4")
-
-
 
         expected_results = ["GameStates.start_game <class 'player.Player'>",
                             "GameStates.rounds_pick_characters_prepare Player 1",
@@ -79,7 +76,6 @@ class TestGameStateController(unittest.TestCase):
                             "GameStates.turns_order_players <class 'player.Player'>"]
         for correct_result in expected_results:
             actual_result = str(gsc.state) + " " + str(gsc.current_player)
-            print(actual_result)
             self.assertEquals(actual_result, correct_result)
             if gsc.state == GameStates.turns_order_players:
                 gsc.players[0].character = gsc.character_deck[3]
@@ -88,10 +84,31 @@ class TestGameStateController(unittest.TestCase):
                 gsc.players[3].character = gsc.character_deck[1]
             gsc.update_state()
 
-        for i in list(range(21)):
-            actual_result = str(gsc.state) + " " + str(gsc.current_player)
-            print(actual_result)
-            gsc.update_state()
+        expected_results = ["GameStates.turns_call_character <class 'player.Player'>",
+                            "GameStates.turns_begin Player 4",
+                            "GameStates.turns_income Player 4",
+                            "GameStates.turns_general Player 4",
+                            "GameStates.turns_end Player 4",
+                            "GameStates.turns_call_character Player 4",
+                            "GameStates.turns_begin Player 2",
+                            "GameStates.turns_income Player 2",
+                            "GameStates.turns_general Player 2",
+                            "GameStates.turns_end Player 2",
+                            "GameStates.turns_call_character Player 2",
+                            "GameStates.turns_begin Player 1",
+                            "GameStates.turns_income Player 1",
+                            "GameStates.turns_general Player 1",
+                            "GameStates.turns_end Player 1",
+                            "GameStates.turns_call_character Player 1",
+                            "GameStates.turns_begin Player 3",
+                            "GameStates.turns_income Player 3",
+                            "GameStates.turns_general Player 3",
+                            "GameStates.turns_end Player 3",
+                            "GameStates.turns_call_character Player 3",
+                            "GameStates.rounds_pick_characters_prepare Player 3"]
 
-        self.assertTrue(False)
+        for correct_result in expected_results:
+            actual_result = str(gsc.state) + " " + str(gsc.current_player)
+            self.assertEquals(actual_result, correct_result)
+            gsc.update_state()
 
