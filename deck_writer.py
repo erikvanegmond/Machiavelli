@@ -48,8 +48,8 @@ cards_list.append((Card("Hospitaal", 6, "purple", special_ability=None, descript
 cards_list.append((Card("Park", 6, "purple", special_ability=None, description="Als je aan het einde van je beurt geen kaarten meer hebt, mag je 2 kaarten van de stapel trekken"), 1))
 cards_list.append((Card("School voor magiers", 6, "purple", special_ability=None, description="Tijdens de inkomstenfasen neemt de School voor magiers een kleur naar keuze aan. Je krijgt derhalve een goudstuk als je de Koning, de Prediker, de Koopman of de Condottiere bent."), 1))
 cards_list.append((Card("Bibiotheek", 6, "purple", special_ability=None, description="Als je aan het begin van je beurt kaarten trekt, mag je ze beide houden."), 1))
-cards_list.append((Card("Universiteit", 6, "purple", worth=8, special_ability=None, description="Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"), 1))
-cards_list.append((Card("Drakenpoort", 6, "purple", worth=8, special_ability=None, description="Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"), 1))
+cards_list.append((Card("Universiteit", 6, "purple", value=8, special_ability=None, description="Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"), 1))
+cards_list.append((Card("Drakenpoort", 6, "purple", value=8, special_ability=None, description="Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"), 1))
 
 deck_list = []
 for card, count in cards_list:

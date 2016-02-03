@@ -25,7 +25,7 @@ class Deck:
             deck_list = json.load(f)
             for card in deck_list:
                 self.deck.append(
-                    Card(card['name'], card['cost'], card['color'], card['worth'], card['special_ability']))
+                    Card(card['name'], card['cost'], card['color'], card['value'], card['special_ability']))
         random.shuffle(self.deck)
         # self.deck.reverse()
 

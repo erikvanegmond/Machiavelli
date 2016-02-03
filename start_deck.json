@@ -3,7 +3,7 @@
     "special_ability": null,
     "name": "Wachttoren",
     "color": "red",
-    "worth": 1,
+    "value": 1,
     "cost": 1,
     "description": null
   },
@@ -11,7 +11,7 @@
     "special_ability": null,
     "name": "Wachttoren",
     "color": "red",
-    "worth": 1,
+    "value": 1,
     "cost": 1,
     "description": null
   },
@@ -19,7 +19,7 @@
     "special_ability": null,
     "name": "Wachttoren",
     "color": "red",
-    "worth": 1,
+    "value": 1,
     "cost": 1,
     "description": null
   },
@@ -27,7 +27,7 @@
     "special_ability": null,
     "name": "Gevangenis",
     "color": "red",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -35,7 +35,7 @@
     "special_ability": null,
     "name": "Gevangenis",
     "color": "red",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -43,7 +43,7 @@
     "special_ability": null,
     "name": "Gevangenis",
     "color": "red",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -51,7 +51,7 @@
     "special_ability": null,
     "name": "Toernooiveld",
     "color": "red",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -59,7 +59,7 @@
     "special_ability": null,
     "name": "Toernooiveld",
     "color": "red",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -67,7 +67,7 @@
     "special_ability": null,
     "name": "Toernooiveld",
     "color": "red",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -75,7 +75,7 @@
     "special_ability": null,
     "name": "Burcht",
     "color": "red",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": null
   },
@@ -83,7 +83,7 @@
     "special_ability": null,
     "name": "Burcht",
     "color": "red",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": null
   },
@@ -91,7 +91,7 @@
     "special_ability": null,
     "name": "Taveerne",
     "color": "green",
-    "worth": 1,
+    "value": 1,
     "cost": 1,
     "description": null
   },
@@ -99,7 +99,7 @@
     "special_ability": null,
     "name": "Taveerne",
     "color": "green",
-    "worth": 1,
+    "value": 1,
     "cost": 1,
     "description": null
   },
@@ -107,7 +107,7 @@
     "special_ability": null,
     "name": "Taveerne",
     "color": "green",
-    "worth": 1,
+    "value": 1,
     "cost": 1,
     "description": null
   },
@@ -115,7 +115,7 @@
     "special_ability": null,
     "name": "Taveerne",
     "color": "green",
-    "worth": 1,
+    "value": 1,
     "cost": 1,
     "description": null
   },
@@ -123,7 +123,7 @@
     "special_ability": null,
     "name": "Taveerne",
     "color": "green",
-    "worth": 1,
+    "value": 1,
     "cost": 1,
     "description": null
   },
@@ -131,7 +131,7 @@
     "special_ability": null,
     "name": "Winkels",
     "color": "green",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -139,7 +139,7 @@
     "special_ability": null,
     "name": "Winkels",
     "color": "green",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -147,7 +147,7 @@
     "special_ability": null,
     "name": "Winkels",
     "color": "green",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -155,7 +155,7 @@
     "special_ability": null,
     "name": "Markt",
     "color": "green",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -163,7 +163,7 @@
     "special_ability": null,
     "name": "Markt",
     "color": "green",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -171,7 +171,7 @@
     "special_ability": null,
     "name": "Markt",
     "color": "green",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -179,7 +179,7 @@
     "special_ability": null,
     "name": "Markt",
     "color": "green",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -187,7 +187,7 @@
     "special_ability": null,
     "name": "Handelshuis",
     "color": "green",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -195,7 +195,7 @@
     "special_ability": null,
     "name": "Handelshuis",
     "color": "green",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -203,7 +203,7 @@
     "special_ability": null,
     "name": "Handelshuis",
     "color": "green",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -211,7 +211,7 @@
     "special_ability": null,
     "name": "Haven",
     "color": "green",
-    "worth": 4,
+    "value": 4,
     "cost": 4,
     "description": null
   },
@@ -219,7 +219,7 @@
     "special_ability": null,
     "name": "Haven",
     "color": "green",
-    "worth": 4,
+    "value": 4,
     "cost": 4,
     "description": null
   },
@@ -227,7 +227,7 @@
     "special_ability": null,
     "name": "Haven",
     "color": "green",
-    "worth": 4,
+    "value": 4,
     "cost": 4,
     "description": null
   },
@@ -235,7 +235,7 @@
     "special_ability": null,
     "name": "Raadhuis",
     "color": "green",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": null
   },
@@ -243,7 +243,7 @@
     "special_ability": null,
     "name": "Raadhuis",
     "color": "green",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": null
   },
@@ -251,7 +251,7 @@
     "special_ability": null,
     "name": "Tempel",
     "color": "blue",
-    "worth": 1,
+    "value": 1,
     "cost": 1,
     "description": null
   },
@@ -259,7 +259,7 @@
     "special_ability": null,
     "name": "Tempel",
     "color": "blue",
-    "worth": 1,
+    "value": 1,
     "cost": 1,
     "description": null
   },
@@ -267,7 +267,7 @@
     "special_ability": null,
     "name": "Tempel",
     "color": "blue",
-    "worth": 1,
+    "value": 1,
     "cost": 1,
     "description": null
   },
@@ -275,7 +275,7 @@
     "special_ability": null,
     "name": "Kerk",
     "color": "blue",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -283,7 +283,7 @@
     "special_ability": null,
     "name": "Kerk",
     "color": "blue",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -291,7 +291,7 @@
     "special_ability": null,
     "name": "Kerk",
     "color": "blue",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": null
   },
@@ -299,7 +299,7 @@
     "special_ability": null,
     "name": "Klooster",
     "color": "blue",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -307,7 +307,7 @@
     "special_ability": null,
     "name": "Klooster",
     "color": "blue",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -315,7 +315,7 @@
     "special_ability": null,
     "name": "Klooster",
     "color": "blue",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -323,7 +323,7 @@
     "special_ability": null,
     "name": "Kathedraal",
     "color": "blue",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": null
   },
@@ -331,7 +331,7 @@
     "special_ability": null,
     "name": "Kathedraal",
     "color": "blue",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": null
   },
@@ -339,7 +339,7 @@
     "special_ability": null,
     "name": "Landgoed",
     "color": "yellow",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -347,7 +347,7 @@
     "special_ability": null,
     "name": "Landgoed",
     "color": "yellow",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -355,7 +355,7 @@
     "special_ability": null,
     "name": "Landgoed",
     "color": "yellow",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -363,7 +363,7 @@
     "special_ability": null,
     "name": "Landgoed",
     "color": "yellow",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -371,7 +371,7 @@
     "special_ability": null,
     "name": "Landgoed",
     "color": "yellow",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": null
   },
@@ -379,7 +379,7 @@
     "special_ability": null,
     "name": "Kasteel",
     "color": "yellow",
-    "worth": 4,
+    "value": 4,
     "cost": 4,
     "description": null
   },
@@ -387,7 +387,7 @@
     "special_ability": null,
     "name": "Kasteel",
     "color": "yellow",
-    "worth": 4,
+    "value": 4,
     "cost": 4,
     "description": null
   },
@@ -395,7 +395,7 @@
     "special_ability": null,
     "name": "Kasteel",
     "color": "yellow",
-    "worth": 4,
+    "value": 4,
     "cost": 4,
     "description": null
   },
@@ -403,7 +403,7 @@
     "special_ability": null,
     "name": "Kasteel",
     "color": "yellow",
-    "worth": 4,
+    "value": 4,
     "cost": 4,
     "description": null
   },
@@ -411,7 +411,7 @@
     "special_ability": null,
     "name": "Paleis",
     "color": "yellow",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": null
   },
@@ -419,7 +419,7 @@
     "special_ability": null,
     "name": "Paleis",
     "color": "yellow",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": null
   },
@@ -427,7 +427,7 @@
     "special_ability": null,
     "name": "Paleis",
     "color": "yellow",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": null
   },
@@ -435,7 +435,7 @@
     "special_ability": null,
     "name": "Armenhuis",
     "color": "purple",
-    "worth": 0,
+    "value": 0,
     "cost": 0,
     "description": "Als je aan het einde van je beurt geen goud bezit, ontvang je 1 goudstuk van de bank."
   },
@@ -443,7 +443,7 @@
     "special_ability": null,
     "name": "Hof der Wonderen",
     "color": "purple",
-    "worth": 2,
+    "value": 2,
     "cost": 2,
     "description": "Bij het tellen van de overwinningspunten mag je het Hof der Wonderen als een bouwerk met een kleur naar keuze benoemen"
   },
@@ -451,7 +451,7 @@
     "special_ability": null,
     "name": "Kerker",
     "color": "purple",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": "De kerker kan niet door de Condottiere verwoest worden."
   },
@@ -459,7 +459,7 @@
     "special_ability": null,
     "name": "Kerker",
     "color": "purple",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": "De kerker kan niet door de Condottiere verwoest worden."
   },
@@ -467,7 +467,7 @@
     "special_ability": null,
     "name": "Vuurtoren",
     "color": "purple",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": "Op het moment dat je de Vuurtoren bouwt, mag je eenmalig de stapel gebouwenkaarten doorzoeken en er een van in je hand nemen. Schud daarna de stapel."
   },
@@ -475,7 +475,7 @@
     "special_ability": null,
     "name": "Kruittoren",
     "color": "purple",
-    "worth": 3,
+    "value": 3,
     "cost": 3,
     "description": "Je mag tegelijkertijd de Kruittoren en een gebouw van een medespeler naar keuze opblazen."
   },
@@ -483,7 +483,7 @@
     "special_ability": null,
     "name": "Museum",
     "color": "purple",
-    "worth": 4,
+    "value": 4,
     "cost": 4,
     "description": "Je mag in elk van je beurten een van je gebouwenkaarten onder het Museum schuiven. Aan het einde van het spel krijg je voor elke kaart 1 extra overwinningspunt."
   },
@@ -491,7 +491,7 @@
     "special_ability": null,
     "name": "Schatkamer",
     "color": "purple",
-    "worth": 4,
+    "value": 4,
     "cost": 4,
     "description": "Aan het einde van het spel krijg je 1 extra overwinningspunt voor elk goudstuk in je bezit"
   },
@@ -499,7 +499,7 @@
     "special_ability": null,
     "name": "Kerkhof",
     "color": "purple",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": "Als de Condottiere een gebouw verwoest, dan mag je een goudstuk betalen om die bouwkaart in de hand te nemen. Je mag dit echter niet doen als je zelf de Condottiere bent."
   },
@@ -507,7 +507,7 @@
     "special_ability": null,
     "name": "Wensput",
     "color": "purple",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": "Aan het einde van eht spel krijg je 1 extra overwinninspunt voor elk ander lila gebouw"
   },
@@ -515,7 +515,7 @@
     "special_ability": null,
     "name": "Casino",
     "color": "purple",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": "Aan het einde van het spel krijg je 1 extra overwinningspunt voor elke kaard, die je in je hand hebt."
   },
@@ -523,7 +523,7 @@
     "special_ability": null,
     "name": "Observatorium",
     "color": "purple",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": "Als je aan het begin van je beurt voor een bouwkaart kiest, dan mag je er 3 trekken en er vervolgens 1 uitkiezen en beide andere onder de trekstaple leggen"
   },
@@ -531,7 +531,7 @@
     "special_ability": null,
     "name": "Laboratorium",
     "color": "purple",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": "Gedurende je beurt mag je eenmal een bouwkaart afleggen. Je krijgt daarvoor een goudstuk terug."
   },
@@ -539,7 +539,7 @@
     "special_ability": null,
     "name": "Fabriek",
     "color": "purple",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": "Het bouwen van elk volgend lila gebouw is voor jou 1 goudstuk goedkoper"
   },
@@ -547,7 +547,7 @@
     "special_ability": null,
     "name": "Werkplaats",
     "color": "purple",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": "Je mag tijdens je beurt eenmaal 3 goudstukken betalen om 2 bouwkaarten te trekken"
   },
@@ -555,7 +555,7 @@
     "special_ability": null,
     "name": "Klokkentoren",
     "color": "purple",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": "Op het moment dat je de Klokkentoren bouwt, moet je beslissen of het spel al na het 7e gebouw eindigt. Als de klokkentoren wordt vernietigd, eindigt het spel na het bouwen van het 8e gebouw"
   },
@@ -563,7 +563,7 @@
     "special_ability": null,
     "name": "Steengroeve",
     "color": "purple",
-    "worth": 5,
+    "value": 5,
     "cost": 5,
     "description": "Betaal 1 goudstuk minder voor elk volgend gelijk gebouw. "
   },
@@ -571,7 +571,7 @@
     "special_ability": null,
     "name": "Troonzaal",
     "color": "purple",
-    "worth": 6,
+    "value": 6,
     "cost": 6,
     "description": "Je ontvankt elke keer dat de koning van speler wisseld een goudstuk van de bank"
   },
@@ -579,7 +579,7 @@
     "special_ability": null,
     "name": "Balzaal",
     "color": "purple",
-    "worth": 6,
+    "value": 6,
     "cost": 6,
     "description": "Als je de houten koning bezit moet iedere medespele, die door jou opgeroepen wordt, antwoorden met 'Dank u wel Exellentie' Wie dit niet doet verliest zijn complete beurt"
   },
@@ -587,7 +587,7 @@
     "special_ability": null,
     "name": "Grote muur",
     "color": "purple",
-    "worth": 6,
+    "value": 6,
     "cost": 6,
     "description": "De Condottiere moet 1 goudstuk meer betalen als hij een van jou gebouwen vernietigt"
   },
@@ -595,7 +595,7 @@
     "special_ability": null,
     "name": "Hospitaal",
     "color": "purple",
-    "worth": 6,
+    "value": 6,
     "cost": 6,
     "description": "Als je vermoord word mag je desondanks je inkomen incasseren. Daarna is je beurt afgelopen"
   },
@@ -603,7 +603,7 @@
     "special_ability": null,
     "name": "Park",
     "color": "purple",
-    "worth": 6,
+    "value": 6,
     "cost": 6,
     "description": "Als je aan het einde van je beurt geen kaarten meer hebt, mag je 2 kaarten van de stapel trekken"
   },
@@ -611,7 +611,7 @@
     "special_ability": null,
     "name": "School voor magiers",
     "color": "purple",
-    "worth": 6,
+    "value": 6,
     "cost": 6,
     "description": "Tijdens de inkomstenfasen neemt de School voor magiers een kleur naar keuze aan. Je krijgt derhalve een goudstuk als je de Koning, de Prediker, de Koopman of de Condottiere bent."
   },
@@ -619,7 +619,7 @@
     "special_ability": null,
     "name": "Bibiotheek",
     "color": "purple",
-    "worth": 6,
+    "value": 6,
     "cost": 6,
     "description": "Als je aan het begin van je beurt kaarten trekt, mag je ze beide houden."
   },
@@ -627,7 +627,7 @@
     "special_ability": null,
     "name": "Universiteit",
     "color": "purple",
-    "worth": 8,
+    "value": 8,
     "cost": 6,
     "description": "Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"
   },
@@ -635,7 +635,7 @@
     "special_ability": null,
     "name": "Drakenpoort",
     "color": "purple",
-    "worth": 8,
+    "value": 8,
     "cost": 6,
     "description": "Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"
   }
