@@ -15,15 +15,16 @@ class GameStateController:
         self.current_player = Player
         self.king_player = Player
 
-        self.open_cards = 0
-
+        self.number_of_open_cards = 0
         # TODO Fix for expansion
         if n_players == 4:
-            self.open_cards = 2
+            self.number_of_open_cards = 2
         elif n_players == 5:
-            self.open_cards = 1
+            self.number_of_open_cards = 1
 
         self.chosen_characters = []
+        self.open_cards = []
+        self.closed_cards = []
         # TODO Just default, maybe allow for creating your own deck with the expansion
         self.character_deck = [eval(char) for char in Character.characters]  # Character.characters[:]
         self.character_deck.sort(key=lambda x: x.character_number)  # make sure they are sorted
@@ -56,19 +57,32 @@ class GameStateController:
             if player.character == check_character:
                 return player
 
+    def take_open_cards(self):
+        for _ in list(range(self.number_of_open_cards)):
+            while True:
+                card = random.choice(self.character_deck)
+                if card == "King":
+                    continue
+                elif card in self.chosen_characters:
+                    continue
+                self.chosen_characters.append(card)
+                break
+
     def update_state(self):
         if self.state == GameStates.start_game:
             self.king_player = self.players[0]
             self.current_player = self.players[0]
             self.state = GameStates.rounds_pick_characters_prepare
         elif self.state == GameStates.rounds_pick_characters_prepare:
-            # Remove characters from player and make all characters available again
+            # Remove characters from players and table, and make all characters available again
             self.chosen_characters = []
+            self.open_cards = []
+            self.closed_cards = []
             for player in self.players:
                 if player.character == "King":
                     self.king_player = player
                 player.character = Character
-
+            self.take_open_cards()
             self.player_order = self.get_player_order()
             self.state = GameStates.rounds_pick_characters
         elif self.state == GameStates.rounds_pick_characters:
@@ -111,3 +125,9 @@ class GameStateController:
         else:
             # Something not right with n_players
             pass
+
+    def __str__(self):
+        return "State:{}, current_player, {}".format(self.state, self.current_player.name)
+
+    def __repr__(self):
+        return "State:{}, current_player, {}".format(self.state, self.current_player.name)
