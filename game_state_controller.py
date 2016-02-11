@@ -126,8 +126,15 @@ class GameStateController:
             # Something not right with n_players
             pass
 
+    def get_possible_characters(self):
+        possible = []
+        for c in self.character_deck:
+            if c not in self.open_cards and c not in self.chosen_characters and c not in self.closed_cards:
+                possible.append(c)
+        return possible
+
     def __str__(self):
-        return "State:{}, current_player, {}".format(self.state, self.current_player.name)
+        return "State:{}, current_player, {}".format(self.state, self.current_player)
 
     def __repr__(self):
-        return "State:{}, current_player, {}".format(self.state, self.current_player.name)
+        return "State:{}, current_player, {}".format(self.state, self.current_player)

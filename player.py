@@ -3,7 +3,6 @@ import character
 
 
 class Player:
-
     def __init__(self, name=""):
         self.gold = 2
         self.hand = []
