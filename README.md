@@ -13,6 +13,6 @@ python setup.py install
 ```
 
 ## Running the webserver
-'''
+```
 python main.py
-'''
+```
