@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Machiavelli</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script>
+        function updateGameState(){
+            $.ajax({
+                url: "/game/state",
+                method: "GET",
+                success: function( data ) {
+                    $( "#gameState" ).html( "<ul id=gameList></ul>" );
+                    $.each(data, function(k,v){
+                        $("#gameList").append('<li>'+k+' - '+v+'</li>');
+                    });
+                }
+            });
+
+        };
+        $(document).ready(function(){
+            $( "#updateGameStateButton" ).click(function(){updateGameState()});
+            updateGameState();
+        });
+    </script>
+</head>
+<body>
+    <button id="updateGameStateButton">Update</button>
+    <hr/>
+    <div id="gameState">Game State</div>
+    <hr/>
+    <div id="actionForm">Form</div>
+</body>
+</html>

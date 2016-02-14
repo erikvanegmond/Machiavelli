@@ -1,7 +1,4 @@
-import tornado.ioloop
 import tornado.web
-
-PORT = 8888
 
 
 class MainHandler(tornado.web.RequestHandler):
@@ -14,7 +11,7 @@ class GameState(tornado.web.RequestHandler):
 
     def get(self):
         self.set_header("Content-Type", "application/json; charset=UTF-8")
-        response = {'gameName': 'example'}  # TODO: Get the response from game controller.
+        response = {'gameName': 'exdample'}  # TODO: Get the response from game controller.
         self.write(response)
 
 
@@ -44,10 +41,3 @@ class Application(tornado.web.Application):
             "debug": True
         }
         tornado.web.Application.__init__(self, handlers, **settings)
-
-
-if __name__ == "__main__":
-    app = Application()
-    app.listen(PORT)
-    print("Server running on http://localhost:{0}".format(PORT))
-    tornado.ioloop.IOLoop.current().start()
