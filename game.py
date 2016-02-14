@@ -53,7 +53,6 @@ class Game:
         else:
             print("Unknown state")
 
-
     def character_stage(self, player, possible_characters):
         question, possibilities = generate_question(possible_characters)
         while True:
@@ -98,6 +97,7 @@ class Game:
             else:
                 print("did not understand")
         print(player.hand)
+
 
     def build_stage(self, player):
         question, possibilities = generate_question(player.hand)

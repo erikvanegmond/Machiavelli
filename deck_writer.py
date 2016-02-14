@@ -33,10 +33,10 @@ cards_list.append((Card("Kruittoren", 3, "purple", special_ability=None, descrip
 cards_list.append((Card("Museum", 4, "purple", special_ability=None, description="Je mag in elk van je beurten een van je gebouwenkaarten onder het Museum schuiven. Aan het einde van het spel krijg je voor elke kaart 1 extra overwinningspunt."),1))
 cards_list.append((Card("Schatkamer", 4, "purple", special_ability=None, description="Aan het einde van het spel krijg je 1 extra overwinningspunt voor elk goudstuk in je bezit"), 1))
 cards_list.append((Card("Kerkhof", 5, "purple", special_ability=None, description="Als de Condottiere een gebouw verwoest, dan mag je een goudstuk betalen om die bouwkaart in de hand te nemen. Je mag dit echter niet doen als je zelf de Condottiere bent."), 1))
-cards_list.append((Card("Wensput", 5, "purple", special_ability=None, description="Aan het einde van eht spel krijg je 1 extra overwinninspunt voor elk ander lila gebouw"), 1))
+cards_list.append((Card("Wensput", 5, "purple", special_ability=None, description="Aan het einde van het spel krijg je 1 extra overwinninspunt voor elk ander lila gebouw"), 1))
 cards_list.append((Card("Casino", 5, "purple", special_ability=None, description="Aan het einde van het spel krijg je 1 extra overwinningspunt voor elke kaard, die je in je hand hebt."), 1))
-cards_list.append((Card("Observatorium", 5, "purple", special_ability=None, description="Als je aan het begin van je beurt voor een bouwkaart kiest, dan mag je er 3 trekken en er vervolgens 1 uitkiezen en beide andere onder de trekstaple leggen"), 1))
-cards_list.append((Card("Laboratorium", 5, "purple", special_ability=None, description="Gedurende je beurt mag je eenmal een bouwkaart afleggen. Je krijgt daarvoor een goudstuk terug."), 1))
+cards_list.append((Card("Observatorium", 5, "purple", special_ability=None, description="Als je aan het begin van je beurt voor een bouwkaart kiest, dan mag je er 3 trekken en er vervolgens 1 uitkiezen en beide andere onder de trekstapel leggen"), 1))
+cards_list.append((Card("Laboratorium", 5, "purple", special_ability=None, description="Gedurende je beurt mag je eenmaal een bouwkaart afleggen. Je krijgt daarvoor een goudstuk terug."), 1))
 cards_list.append((Card("Fabriek", 5, "purple", special_ability=None, description="Het bouwen van elk volgend lila gebouw is voor jou 1 goudstuk goedkoper"), 1))
 cards_list.append((Card("Werkplaats", 5, "purple", special_ability=None, description="Je mag tijdens je beurt eenmaal 3 goudstukken betalen om 2 bouwkaarten te trekken"), 1))
 cards_list.append((Card("Klokkentoren", 5, "purple", special_ability=None, description="Op het moment dat je de Klokkentoren bouwt, moet je beslissen of het spel al na het 7e gebouw eindigt. Als de klokkentoren wordt vernietigd, eindigt het spel na het bouwen van het 8e gebouw"), 1))
@@ -48,8 +48,8 @@ cards_list.append((Card("Hospitaal", 6, "purple", special_ability=None, descript
 cards_list.append((Card("Park", 6, "purple", special_ability=None, description="Als je aan het einde van je beurt geen kaarten meer hebt, mag je 2 kaarten van de stapel trekken"), 1))
 cards_list.append((Card("School voor magiers", 6, "purple", special_ability=None, description="Tijdens de inkomstenfasen neemt de School voor magiers een kleur naar keuze aan. Je krijgt derhalve een goudstuk als je de Koning, de Prediker, de Koopman of de Condottiere bent."), 1))
 cards_list.append((Card("Bibiotheek", 6, "purple", special_ability=None, description="Als je aan het begin van je beurt kaarten trekt, mag je ze beide houden."), 1))
-cards_list.append((Card("Universiteit", 6, "purple", worth=8, special_ability=None, description="Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"), 1))
-cards_list.append((Card("Drakenpoort", 6, "purple", worth=8, special_ability=None, description="Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"), 1))
+cards_list.append((Card("Universiteit", 6, "purple", value=8, special_ability=None, description="Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"), 1))
+cards_list.append((Card("Drakenpoort", 6, "purple", value=8, special_ability=None, description="Dit presitgeuze gebouw kost 6 goudstukken en levert aan het einde van je beurt 8 overwinningspunten op"), 1))
 
 deck_list = []
 for card, count in cards_list:

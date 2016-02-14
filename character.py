@@ -18,6 +18,15 @@ class Character:
     def __repr__(self):
         return self.character
 
+    def __eq__(self, other):
+        """
+        Characters are the same if they are the same character, as there is only one of each character
+        """
+        if type(self) == type(other):
+            return True
+        return False
+
+
     def get_color(self):
         return "grey"
 
@@ -26,6 +35,9 @@ class Character:
 
 
 class Assassin(Character):
+    character_number = 1
+    character = "Assassin"
+
     def __init__(self, player):
         self.player = player
 
@@ -36,11 +48,11 @@ class Assassin(Character):
         """
         pass
 
-    def __repr__(self):
-        return "Assassin"
-
 
 class Thief(Character):
+    character_number = 2
+    character = "Thief"
+
     def __init__(self, player):
         self.player = player
 
@@ -56,6 +68,9 @@ class Thief(Character):
 
 
 class Magician(Character):
+    character_number = 3
+    character = "Magician"
+
     def __init__(self, player):
         self.player = player
 
@@ -71,6 +86,9 @@ class Magician(Character):
 
 
 class King(Character):
+    character_number = 4
+    character = "King"
+
     def __init__(self, player):
         self.player = player
 
@@ -84,11 +102,11 @@ class King(Character):
     def get_color(self):
         return "yellow"
 
-    def __repr__(self):
-        return "King"
-
 
 class Bishop(Character):
+    character_number = 5
+    character = "Bishop"
+
     def __init__(self, player):
         self.player = player
 
@@ -107,6 +125,9 @@ class Bishop(Character):
 
 
 class Merchant(Character):
+    character_number = 6
+    character = "Merchant"
+
     def __init__(self, player):
         self.player = player
 
@@ -122,6 +143,9 @@ class Merchant(Character):
 
 
 class Architect(Character):
+    character_number = 7
+    character = "Architect"
+
     def __init__(self, player):
         self.player = player
 
@@ -137,6 +161,9 @@ class Architect(Character):
 
 
 class Warlord(Character):
+    character_number = 8
+    character = "Warlord"
+
     def __init__(self, player):
         self.player = player
 
@@ -151,4 +178,3 @@ class Warlord(Character):
 
     def __repr__(self):
         return "Warlord"
-

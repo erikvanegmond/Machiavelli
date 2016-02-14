@@ -3,9 +3,6 @@ import json
 from card import Card
 
 
-
-
-
 class Deck:
     deck = []
     trash = []
@@ -22,11 +19,18 @@ class Deck:
         return card
 
     def read_deck(self):
+        self.deck = []
         deck_file = 'start_deck.json'
         with open(deck_file) as f:
             deck_list = json.load(f)
             for card in deck_list:
-                self.deck.append(Card(card['name'], card['cost'], card['color'], card['worth'], card['special_ability']))
+                self.deck.append(
+                    Card(card['name'], card['cost'], card['color'], card['value'], card['special_ability']))
         random.shuffle(self.deck)
         # self.deck.reverse()
+
+
 deck = Deck()
+
+
+
