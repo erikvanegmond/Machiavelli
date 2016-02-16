@@ -32,6 +32,13 @@ class GameTakeAction(tornado.web.RequestHandler):
         self.write("Action taken response")  # TODO: Post action taken to game controller.
 
 
+class GameUpdate(tornado.web.RequestHandler):
+    """ Posting to this method will resolve an action in the game state """
+
+    def post(self):
+        self.write("Update")  # TODO: Post update to game controller.
+
+
 class Application(tornado.web.Application):
     def __init__(self):
         global gsc
@@ -39,7 +46,8 @@ class Application(tornado.web.Application):
             (r"/", MainHandler),
             (r"/game/state", GameState),
             (r"/reset", GameReset),  # Technical alpha single game version only.
-            (r"/game", GameTakeAction)
+            (r"/game/action", GameTakeAction),
+            (r"/game/update", GameUpdate)
         ]
         settings = {
             "debug": True
