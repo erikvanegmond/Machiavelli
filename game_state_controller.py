@@ -142,14 +142,10 @@ class GameStateController:
         return "State:{}, current_player, {}".format(self.state, self.current_player)
 
     def get_state(self):
-        state = {}
-        state['game_name'] = self.game_name
-        state['n_players'] = self.n_players
-        state['open_cards'] = self.open_cards
-        if isinstance(self.current_player,Player):
+        state = {'game_name': self.game_name, 'n_players': self.n_players, 'open_cards': self.open_cards,
+                 'game_state': self.state.name, 'players': [x.name for x in self.players]}
+        if isinstance(self.current_player, Player):
             state['current_player'] = self.current_player.__str__()
-        if isinstance(self.king_player,Player):
+        if isinstance(self.king_player, Player):
             state['king_player'] = self.king_player.__str__()
-        state['game_state'] = self.state.name
-        state['players'] = [x.name for x in self.players]
         return state
