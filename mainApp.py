@@ -22,7 +22,16 @@ class GameState(tornado.web.RequestHandler):
 class GameReset(tornado.web.RequestHandler):
     """ Posting to this method will reset the game state """
 
+    def initialize(self, gsc):
+        self.gsc = gsc
+
     def post(self):
+        self.gsc.reset()
+        self.gsc.add_player("Erik")
+        self.gsc.add_player("Justin")
+        self.gsc.add_player("Abigail")
+        self.gsc.add_player("Sabrina")
+
         self.write("Reset")  # TODO: Post reset action to game controller.
 
 
@@ -56,7 +65,7 @@ class Application(tornado.web.Application):
         handlers = [
             (r"/", MainHandler),
             (r"/game/state", GameState, dict(gsc=self.gsc)),
-            (r"/reset", GameReset),  # Technical alpha single game version only.
+            (r"/reset", GameReset, dict(gsc=self.gsc)),  # Technical alpha single game version only.
             (r"/game/action", GameTakeAction),
             (r"/game/update", GameUpdate, dict(gsc=self.gsc))
         ]

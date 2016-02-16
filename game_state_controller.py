@@ -141,6 +141,9 @@ class GameStateController:
     def __repr__(self):
         return "State:{}, current_player, {}".format(self.state, self.current_player)
 
+    def reset(self):
+        self.__init__(self.n_players, game_name=self.game_name)
+
     def get_state(self):
         state = {'game_name': self.game_name, 'n_players': self.n_players, 'open_cards': self.open_cards,
                  'game_state': self.state.name, 'players': [x.name for x in self.players]}
