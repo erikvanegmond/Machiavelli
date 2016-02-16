@@ -4,7 +4,7 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script>
-        function updateGameState(){
+        function updateGameStateView(){
             $.ajax({
                 url: "/game/state",
                 method: "GET",
@@ -15,16 +15,24 @@
                     });
                 }
             });
-
+        };
+        function updateGameState(){
+            $.ajax({
+                url: "/game/update",
+                method: "POST"
+            });
+            updateGameStateView();
         };
         $(document).ready(function(){
+            $( "#updateGameStateViewButton" ).click(function(){updateGameStateView()});
             $( "#updateGameStateButton" ).click(function(){updateGameState()});
             updateGameState();
         });
     </script>
 </head>
 <body>
-    <button id="updateGameStateButton">Update</button>
+    <button id="updateGameStateViewButton">Update View</button>
+    <button id="updateGameStateButton">Update Game State</button>
     <hr/>
     <div id="gameState">Game State</div>
     <hr/>
