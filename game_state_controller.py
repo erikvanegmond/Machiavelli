@@ -151,4 +151,5 @@ class GameStateController:
         if isinstance(self.king_player,Player):
             state['king_player'] = self.king_player.__str__()
         state['game_state'] = self.state.name
+        state['players'] = [x.name for x in self.players]
         return state
