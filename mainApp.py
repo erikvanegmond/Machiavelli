@@ -1,4 +1,7 @@
 import tornado.web
+import game_state_controller
+
+gsc = game_state_controller.GameStateController
 
 
 class MainHandler(tornado.web.RequestHandler):
@@ -11,7 +14,7 @@ class GameState(tornado.web.RequestHandler):
 
     def get(self):
         self.set_header("Content-Type", "application/json; charset=UTF-8")
-        response = {'gameName': 'exdample'}  # TODO: Get the response from game controller.
+        response = gsc.get_state()
         self.write(response)
 
 
@@ -31,6 +34,7 @@ class GameTakeAction(tornado.web.RequestHandler):
 
 class Application(tornado.web.Application):
     def __init__(self):
+        global gsc
         handlers = [
             (r"/", MainHandler),
             (r"/game/state", GameState),
@@ -41,3 +45,4 @@ class Application(tornado.web.Application):
             "debug": True
         }
         tornado.web.Application.__init__(self, handlers, **settings)
+        gsc = game_state_controller.GameStateController(4, game_name="My Game")

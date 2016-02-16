@@ -6,7 +6,9 @@ from player import *
 
 
 class GameStateController:
-    def __init__(self, n_players):
+    def __init__(self, n_players, game_name="Name"):
+        self.game_name = game_name
+
         self.state = GameStates.start_game
 
         self.players = []
@@ -138,3 +140,15 @@ class GameStateController:
 
     def __repr__(self):
         return "State:{}, current_player, {}".format(self.state, self.current_player)
+
+    def get_state(self):
+        state = {}
+        state['game_name'] = self.game_name
+        state['n_players'] = self.n_players
+        state['open_cards'] = self.open_cards
+        if isinstance(self.current_player,Player):
+            state['current_player'] = self.current_player.__str__()
+        if isinstance(self.king_player,Player):
+            state['king_player'] = self.king_player.__str__()
+        state['game_state'] = self.state.name
+        return state
