@@ -146,9 +146,18 @@ class GameStateController:
 
     def get_state(self):
         state = {'game_name': self.game_name, 'n_players': self.n_players, 'open_cards': self.open_cards,
+                 'n_open_cards': self.number_of_open_cards, 'closed_cards': len(self.closed_cards),
                  'game_state': self.state.name, 'players': [x.name for x in self.players]}
         if isinstance(self.current_player, Player):
             state['current_player'] = self.current_player.__str__()
         if isinstance(self.king_player, Player):
             state['king_player'] = self.king_player.__str__()
+
         return state
+
+    def get_actions(self):
+        actions = {}
+        if isinstance(self.current_player, Player):
+            if self.state == GameStates.rounds_pick_characters:
+                actions['pick_character'] = [x.character for x in self.get_possible_characters()]
+        return actions

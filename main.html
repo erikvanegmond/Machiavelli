@@ -10,8 +10,11 @@
                 method: "GET",
                 success: function( data ) {
                     $( "#gameState" ).html( "<ul id=gameList></ul>" );
-                    $.each(data, function(k,v){
+                    $.each(data['state'], function(k,v){
                         $("#gameList").append('<li>'+k+' - '+v+'</li>');
+                    });
+                    $.each(data['actions'], function(k,v){
+                        $("#actionForm").append('<li>'+k+' - '+v+'</li>');
                     });
                 }
             });

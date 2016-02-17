@@ -15,7 +15,13 @@ class GameState(tornado.web.RequestHandler):
 
     def get(self):
         self.set_header("Content-Type", "application/json; charset=UTF-8")
-        response = self.gsc.get_state()
+        state = self.gsc.get_state()
+        actions = self.gsc.get_actions()
+        response = {}
+        if len(state) > 0:
+            response['state'] = state
+        if len(actions) > 0:
+            response['actions'] = actions
         self.write(response)
 
 
@@ -60,7 +66,6 @@ class Application(tornado.web.Application):
         self.gsc.add_player("Justin")
         self.gsc.add_player("Abigail")
         self.gsc.add_player("Sabrina")
-
 
         handlers = [
             (r"/", MainHandler),
