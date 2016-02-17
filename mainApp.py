@@ -7,6 +7,12 @@ class MainHandler(tornado.web.RequestHandler):
         self.render("main.html")
 
 
+class StaticFiles(tornado.web.RequestHandler):
+    def get(self, path):
+        self.render(path)
+
+
+
 class GameState(tornado.web.RequestHandler):
     """ Get requests to this method will respond in a json with the game state """
 
@@ -72,7 +78,8 @@ class Application(tornado.web.Application):
             (r"/game/state", GameState, dict(gsc=self.gsc)),
             (r"/reset", GameReset, dict(gsc=self.gsc)),  # Technical alpha single game version only.
             (r"/game/action", GameTakeAction),
-            (r"/game/update", GameUpdate, dict(gsc=self.gsc))
+            (r"/game/update", GameUpdate, dict(gsc=self.gsc)),
+            (r"/static/(.*)", StaticFiles)
         ]
         settings = {
             "debug": True

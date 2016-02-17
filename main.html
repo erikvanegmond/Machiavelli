@@ -3,43 +3,7 @@
     <title>Machiavelli</title>
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script>
-        function updateGameStateView(){
-            $.ajax({
-                url: "/game/state",
-                method: "GET",
-                success: function( data ) {
-                    $( "#gameState" ).html( "<ul id=gameList></ul>" );
-                    $.each(data['state'], function(k,v){
-                        $("#gameList").append('<li>'+k+' - '+v+'</li>');
-                    });
-                    $.each(data['actions'], function(k,v){
-                        $("#actionForm").append('<li>'+k+' - '+v+'</li>');
-                    });
-                }
-            });
-        };
-        function updateGameState(){
-            $.ajax({
-                url: "/game/update",
-                method: "POST"
-            });
-            updateGameStateView();
-        };
-        function reset(){
-            $.ajax({
-                url: "/reset",
-                method: "POST"
-            });
-            updateGameStateView();
-        };
-        $(document).ready(function(){
-            $( "#updateGameStateViewButton" ).click(function(){updateGameStateView()});
-            $( "#updateGameStateButton" ).click(function(){updateGameState()});
-            $( "#reset" ).click(function(){reset()});
-            updateGameState();
-        });
-    </script>
+    <script src="static/main.js"></script>
 </head>
 <body>
     <button id="reset">Reset</button>
