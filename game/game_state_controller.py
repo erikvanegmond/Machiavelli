@@ -2,7 +2,6 @@ from collections import deque
 
 from game.game_states import *
 from game.player import *
-
 from game.character import *
 
 
@@ -165,5 +164,4 @@ class GameStateController:
         return actions
 
     def take_action(self, action):
-
         return "action taken"
