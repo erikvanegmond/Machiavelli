@@ -2,6 +2,7 @@ from collections import deque
 
 from game.game_states import *
 from game.player import *
+
 from game.character import *
 
 
@@ -154,7 +155,14 @@ class GameStateController:
         if isinstance(self.king_player, Player):
             state['king_player'] = self.king_player.__str__()
 
-        return state
+        actions = self.get_actions()
+        response = {}
+        if len(state) > 0:
+            response['state'] = state
+        if len(actions) > 0:
+            response['actions'] = actions
+
+        return response
 
     def get_actions(self):
         actions = {}
@@ -163,5 +171,23 @@ class GameStateController:
                 actions['pick_character'] = [x.character for x in self.get_possible_characters()]
         return actions
 
-    def take_action(self, action):
-        return "action taken"
+    def take_action(self, action: dict):
+        if len(action) > 1:
+            return "No action taken, more than one actions performed"
+        elif len(action) is 0:
+            return "No action taken, as none was performed"
+        else:
+            chosen_action = list(action.keys())[0]
+            method = getattr(self, chosen_action)
+            method(action[chosen_action])
+        self.update_state()
+        return self.get_state()
+
+    def pick_character(self, chosen_character):
+        possible_characters = self.get_possible_characters()
+        if eval(chosen_character) not in possible_characters:
+            return "error, character {} not possible".format(chosen_character)
+        else:
+            self.current_player.character = eval(chosen_character)(self.current_player)
+            self.chosen_characters.append(eval(chosen_character))
+            return chosen_character

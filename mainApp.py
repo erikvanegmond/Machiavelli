@@ -7,7 +7,6 @@ mimetypes.add_type("font/woff2", ".woff2")
 mimetypes.add_type("font/woff", ".woff")
 mimetypes.add_type("font/ttf", ".ttf")
 
-
 from game import game_state_controller
 
 
@@ -26,11 +25,10 @@ class StaticFiles(tornado.web.RequestHandler):
                 mime_type = mimetypes.types_map[file_extension]
                 self.set_header("Content-Type", mime_type + '; charset="utf-8"')
                 self.write(f.read())
-        except (OSError, IOError):
+        except (OSError, IOError, KeyError):
             self.clear()
             self.set_status(404)
             self.finish("<html><body>404!</body></html>")
-
 
 
 class GameState(tornado.web.RequestHandler):
@@ -41,13 +39,7 @@ class GameState(tornado.web.RequestHandler):
 
     def get(self):
         self.set_header("Content-Type", "application/json; charset=UTF-8")
-        state = self.gsc.get_state()
-        actions = self.gsc.get_actions()
-        response = {}
-        if len(state) > 0:
-            response['state'] = state
-        if len(actions) > 0:
-            response['actions'] = actions
+        response = self.gsc.get_state()
         self.write(response)
 
 
@@ -72,7 +64,7 @@ class GameTakeAction(tornado.web.RequestHandler):
 
     def initialize(self, gsc: game_state_controller.GameStateController):
         self.gsc = gsc
-        
+
     def get(self):
         response = self.gsc.take_action("hi")
         self.write(response)  # TODO: Post action taken to game controller.
