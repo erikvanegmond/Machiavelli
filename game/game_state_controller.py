@@ -5,6 +5,8 @@ from game.player import *
 
 from game.character import *
 
+import json
+
 
 class GameStateController:
     def __init__(self, n_players, game_name="Name"):
@@ -49,7 +51,6 @@ class GameStateController:
                 player = self.get_player_with_character(c)
                 if player:
                     player_order.append(player)
-            print(player_order)
             return player_order
         else:
             print("state", self.state)
@@ -58,7 +59,6 @@ class GameStateController:
 
     def get_player_with_character(self, check_character):
         for player in self.players:
-            print("{}({}) {}({})".format(player.character, type(player.character),check_character, type(check_character)))
             if player.character == check_character or type(player.character) == check_character:
                 return player
 
@@ -152,9 +152,10 @@ class GameStateController:
         state = {'game_name': self.game_name, 'n_players': self.n_players, 'open_cards': self.open_cards,
                  'n_open_cards': self.number_of_open_cards, 'closed_cards': len(self.closed_cards),
                  'game_state': self.state.name, 'players': [x.__str__() for x in self.players],
-                 'player_order':[x.__str__() for x in self.player_order]}
+                 'player_order': [x.__str__() for x in self.player_order]}
         if isinstance(self.current_player, Player):
             state['current_player'] = self.current_player.__str__()
+            state['current_player_status'] = json.dumps(self.current_player.get_status())
         if isinstance(self.king_player, Player):
             state['king_player'] = self.king_player.__str__()
 
@@ -172,6 +173,8 @@ class GameStateController:
         if isinstance(self.current_player, Player):
             if self.state == GameStates.rounds_pick_characters:
                 actions['pick_character'] = [x.character for x in self.get_possible_characters()]
+            elif self.state == GameStates.turns_income:
+                actions['income_type'] = ['gold', 'cards']
         return actions
 
     def take_action(self, action: dict):

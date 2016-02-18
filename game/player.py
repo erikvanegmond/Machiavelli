@@ -45,6 +45,13 @@ class Player:
             options += special
         return options
 
+    def get_status(self):
+        status = {"name": self.name, "hand": [x.__repr__() for x in self.hand],
+                  "city": [x.__repr__() for x in self.city], "gold": self.gold}
+        if isinstance(self.character, character.Character):
+            status["character"] = self.character.character
+        return status
+
     def print_status(self):
         print("  name:", self.name)
         print("  character:", self.character)
