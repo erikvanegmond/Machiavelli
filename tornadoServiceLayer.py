@@ -3,11 +3,14 @@ import tornado.web
 import tornado.websocket
 import mimetypes
 import os
+import json
 
 mimetypes.init()
 mimetypes.add_type("font/woff2", ".woff2")
 mimetypes.add_type("font/woff", ".woff")
 mimetypes.add_type("font/ttf", ".ttf")
+
+gsc = game_state_controller.GameStateController(4, game_name="My Game")
 
 
 class HTMLHandler(tornado.web.RequestHandler):
@@ -34,13 +37,37 @@ class FileHandler(tornado.web.RequestHandler):
             self.finish("<html><body>MEEH</body></html>")
 
 
-class GSCHandler(tornado.web.RequestHandler):
+class GSCGetHandler(tornado.web.RequestHandler):
     def initialize(self, state):
         self.state = state
 
     def get(self):
         self.set_header("Content-Type", "application/json; charset=UTF-8")
-        self.write({'state':{'test':'er'}})  # Game.execute(self.state))
+        method = getattr(gsc, self.state)
+        result = method()
+        self.write(result)  # Game.execute(self.state))
+
+
+class GSCPostHandler(tornado.web.RequestHandler):
+    def initialize(self, state):
+        self.state = state
+
+    def post(self):
+        self.set_header("Content-Type", "application/json; charset=UTF-8")
+        method = getattr(gsc, self.state)
+        result = method()
+        self.write("Done")
+
+
+class GSCPostArgHandler(tornado.web.RequestHandler):
+    def initialize(self, state):
+        self.state = state
+
+    def post(self):
+        data = json.loads(self.request.body.decode('utf-8'))
+        method = getattr(gsc, self.state)
+        result = method(data)
+        self.write("Done")
 
 
 class WSHandler(tornado.websocket.WebSocketHandler):
@@ -61,15 +88,17 @@ class WSHandler(tornado.websocket.WebSocketHandler):
 
 class Application(tornado.web.Application):
     def __init__(self):
-        self.gsc = game_state_controller.GameStateController(4, game_name="My Game")
-        self.gsc.add_player("Erik")
-        self.gsc.add_player("Justin")
-        self.gsc.add_player("Abigail")
-        self.gsc.add_player("Sabrina")
+        gsc.add_player("Erik")
+        gsc.add_player("Justin")
+        gsc.add_player("Abigail")
+        gsc.add_player("Sabrina")
 
         handlers = [
             (r"/", HTMLHandler, dict(file='site/main.html')),
-            (r"/game/state", GSCHandler, dict(state='GET_STATE')),
+            (r"/game/state", GSCGetHandler, dict(state='get_state')),
+            (r"/game/update", GSCPostHandler, dict(state='update_state')),
+            (r"/reset", GSCPostHandler, dict(state='reset')),
+            (r"/game/action", GSCPostArgHandler, dict(state='take_action')),
             (r"/game/connect", WSHandler),
             (r"/static/(.*)", FileHandler)
         ]
