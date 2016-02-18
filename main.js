@@ -7,9 +7,12 @@ function updateGameStateView(){
                     $.each(data['state'], function(k,v){
                         $("#gameList").append('<li>'+k+' - '+v+'</li>');
                     });
-                    $( "#actionForm" ).html( "<ul id='actionList'></ul>" );
                     $.each(data['actions'], function(k,v){
-                        $("#actionForm").append('<li>'+k+' - '+v+'</li>');
+                        $( "#actionForm" ).html( "<form id='actionList"+k+"'></form>" );
+                        $.each(v, function(n,c){
+                            console.log("actionList"+k);
+                            $("#actionList"+k).append('<input type="radio" name="'+k+'" value="'+c+'">'+c+'</input>');
+                        })
                     });
                 }
             });
