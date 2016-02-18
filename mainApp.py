@@ -64,8 +64,26 @@ class GameReset(tornado.web.RequestHandler):
 class GameTakeAction(tornado.web.RequestHandler):
     """ Posting to this method will resolve an action in the game state """
 
+    def initialize(self, gsc: game_state_controller.GameStateController):
+        self.gsc = gsc
+        
     def get(self):
-        self.write("Action taken response")  # TODO: Post action taken to game controller.
+        response = self.gsc.take_action("hi")
+        self.write(response)  # TODO: Post action taken to game controller.
+
+    def post(self):
+        data_string = self.request.body.decode('utf-8')
+        data = self.parse_data_string(data_string)
+        response = self.gsc.take_action(data)
+        self.write(response)  # TODO: Post action taken to game controller.
+
+    def parse_data_string(self, string):
+        l = string.split("&")
+        result = {}
+        for i in l:
+            s = i.split("=")
+            result[s[0]] = s[1]
+        return result
 
 
 class GameUpdate(tornado.web.RequestHandler):
@@ -91,7 +109,7 @@ class Application(tornado.web.Application):
             (r"/", MainHandler),
             (r"/game/state", GameState, dict(gsc=self.gsc)),
             (r"/reset", GameReset, dict(gsc=self.gsc)),  # Technical alpha single game version only.
-            (r"/game/action", GameTakeAction),
+            (r"/game/action", GameTakeAction, dict(gsc=self.gsc)),
             (r"/game/update", GameUpdate, dict(gsc=self.gsc)),
             (r"/static/(.*)", StaticFiles)
         ]

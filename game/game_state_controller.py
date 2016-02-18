@@ -162,5 +162,8 @@ class GameStateController:
         if isinstance(self.current_player, Player):
             if self.state == GameStates.rounds_pick_characters:
                 actions['pick_character'] = [x.character for x in self.get_possible_characters()]
-        print(actions)
         return actions
+
+    def take_action(self, action):
+
+        return "action taken"
