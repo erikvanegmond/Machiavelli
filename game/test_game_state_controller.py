@@ -1,5 +1,6 @@
-from game_state_controller import *
 import unittest
+
+from game.game_state_controller import *
 
 
 class TestGameStateController(unittest.TestCase):

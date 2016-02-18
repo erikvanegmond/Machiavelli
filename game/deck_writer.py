@@ -1,5 +1,6 @@
-from card import Card
 import json
+
+from game.card import Card
 
 # noinspection PyListCreation
 cards_list = []

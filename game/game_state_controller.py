@@ -1,8 +1,9 @@
 from collections import deque
 
-from character import *
-from game_states import *
-from player import *
+from game.game_states import *
+from game.player import *
+
+from game.character import *
 
 
 class GameStateController:

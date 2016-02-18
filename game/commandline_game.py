@@ -1,8 +1,9 @@
-from player import Player
-from deck import deck
-from character import *
-from utils import *
-from game_states import *
+from game.character import *
+from game.game_states import *
+from game.player import Player
+from game.utils import *
+
+from game.deck import deck
 
 
 class Game:

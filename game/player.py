@@ -1,5 +1,6 @@
-from deck import *
-import character
+from game import character
+
+from game.deck import *
 
 
 class Player:

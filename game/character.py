@@ -26,7 +26,6 @@ class Character:
             return True
         return False
 
-
     def get_color(self):
         return "grey"
 

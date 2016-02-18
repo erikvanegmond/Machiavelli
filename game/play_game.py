@@ -1,4 +1,4 @@
-from game import Game
+from game.commandline_game import Game
 
 while True:
     n_players = input("How many players?")

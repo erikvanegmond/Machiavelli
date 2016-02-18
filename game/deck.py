@@ -1,6 +1,8 @@
-import random
 import json
-from card import Card
+import random
+import os
+
+from game.card import Card
 
 
 class Deck:
@@ -20,14 +22,14 @@ class Deck:
 
     def read_deck(self):
         self.deck = []
+        root_path = os.path.dirname(os.path.abspath(__file__))
         deck_file = 'start_deck.json'
-        with open(deck_file) as f:
+        with open(root_path+"\\"+deck_file) as f:
             deck_list = json.load(f)
             for card in deck_list:
                 self.deck.append(
                     Card(card['name'], card['cost'], card['color'], card['value'], card['special_ability']))
         random.shuffle(self.deck)
-        # self.deck.reverse()
 
 
 deck = Deck()

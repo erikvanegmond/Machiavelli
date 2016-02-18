@@ -1,5 +1,6 @@
-import utils
 import unittest
+
+from game import utils
 
 
 class TestUtilsMethods(unittest.TestCase):

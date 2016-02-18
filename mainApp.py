@@ -1,5 +1,6 @@
 import tornado.web
-import game_state_controller
+
+from game import game_state_controller
 
 
 class MainHandler(tornado.web.RequestHandler):
