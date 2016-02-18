@@ -8,6 +8,7 @@ class Player:
         self.gold = 2
         self.hand = []
         self.city = []
+        self.temp_hand = []
         self.character = character.Character
         self.name = name
 
@@ -30,7 +31,20 @@ class Player:
         print("Can not build %s" % card)
         return False
 
-    def get_general_income(self):
+    def get_income_gold(self):
+        self.gold += 2
+
+    def get_income_card(self):
+        cards = []
+        for _ in range(2):
+            cards.append(deck.draw_card())
+        self.temp_hand = cards
+        return [x.name for x in cards]
+
+    def keep_income_card(self, card):
+        self.hand.append(card)
+
+    def get_character_income(self):
         color = self.character.get_color()
         for building in self.city:
             if building.color == color:

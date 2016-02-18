@@ -148,7 +148,7 @@ class GameStateController:
         self.__init__(self.n_players, game_name=self.game_name)
         deck.read_deck()
 
-    def get_state(self):
+    def get_game_state(self):
         state = {'game_name': self.game_name, 'n_players': self.n_players, 'open_cards': self.open_cards,
                  'n_open_cards': self.number_of_open_cards, 'closed_cards': len(self.closed_cards),
                  'game_state': self.state.name, 'players': [x.__str__() for x in self.players],
@@ -158,14 +158,21 @@ class GameStateController:
             state['current_player_status'] = json.dumps(self.current_player.get_status())
         if isinstance(self.king_player, Player):
             state['king_player'] = self.king_player.__str__()
+        return state
 
+    def get_state(self):
+
+        state = self.get_game_state()
         actions = self.get_actions()
+        response = self.make_response(state, actions)
+        return response
+
+    def make_response(self, state, actions):
         response = {}
         if len(state) > 0:
             response['state'] = state
         if len(actions) > 0:
             response['actions'] = actions
-
         return response
 
     def get_actions(self):
@@ -174,7 +181,7 @@ class GameStateController:
             if self.state == GameStates.rounds_pick_characters:
                 actions['pick_character'] = [x.character for x in self.get_possible_characters()]
             elif self.state == GameStates.turns_income:
-                actions['income_type'] = ['gold', 'cards']
+                actions['pick_income_type'] = ['gold', 'card']
         return actions
 
     def take_action(self, action: dict):
@@ -185,9 +192,8 @@ class GameStateController:
         else:
             chosen_action = list(action.keys())[0]
             method = getattr(self, chosen_action)
-            method(action[chosen_action])
-        self.update_state()
-        return self.get_state()
+            result = method(action[chosen_action])
+            return result
 
     def pick_character(self, chosen_character):
         possible_characters = self.get_possible_characters()
@@ -196,4 +202,30 @@ class GameStateController:
         else:
             self.current_player.character = eval(chosen_character)(self.current_player)
             self.chosen_characters.append(eval(chosen_character))
-            return chosen_character
+            self.update_state()
+            return self.get_state()
+
+    def pick_income_type(self, chosen_type):
+        if chosen_type == "gold":
+            self.current_player.get_income_gold()
+            self.update_state()
+            return self.get_state()
+        elif chosen_type == "card":
+            cards_drawn = self.current_player.get_income_card()
+            state = self.get_game_state()
+            actions = {'pick_card': cards_drawn}
+            response = self.make_response(state, actions)
+            return response
+
+    def pick_card(self, chosen_card):
+        for c in self.current_player.temp_hand:
+            if c.name == chosen_card:
+                self.current_player.hand.append(c)
+                self.current_player.temp_hand.remove(c)
+
+        for c in self.current_player.temp_hand:
+            deck.trash.append(c)
+
+        self.update_state()
+        return self.get_state()
+
