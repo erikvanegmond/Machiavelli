@@ -144,6 +144,7 @@ class GameStateController:
 
     def reset(self):
         self.__init__(self.n_players, game_name=self.game_name)
+        deck.read_deck()
 
     def get_state(self):
         state = {'game_name': self.game_name, 'n_players': self.n_players, 'open_cards': self.open_cards,
@@ -161,4 +162,5 @@ class GameStateController:
         if isinstance(self.current_player, Player):
             if self.state == GameStates.rounds_pick_characters:
                 actions['pick_character'] = [x.character for x in self.get_possible_characters()]
+        print(actions)
         return actions

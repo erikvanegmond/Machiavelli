@@ -7,10 +7,20 @@ function updateGameStateView(){
                     $.each(data['state'], function(k,v){
                         $("#gameList").append('<li>'+k+' - '+v+'</li>');
                     });
+                    $( "#actionForm" ).html("");
                     $.each(data['actions'], function(k,v){
-                        $( "#actionForm" ).html( "<form id='actionList"+k+"'></form>" );
+                        $( "#actionForm" ).html(
+                            "<form class='form-inline' id='actionList"+k+"'>"+
+                            "<div class='form-group'><label for='actionList"+k+"select'>"+k+"</label> "+
+                            "<select id='actionList"+k+"select' class='form-control'></select>"+
+                            "</div>"+
+                            " <button type='submit' class='btn btn-success'><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> Pick</button>"+
+                            "</form>"
+                        );
                         $.each(v, function(n,c){
-                            $("#actionList"+k).append('<input type="radio" name="'+k+'" value="'+c+'">'+c+'</input>');
+                            $("#actionList"+k+"select").append(
+                                '<option value='+c+'>'+c+'</option>'
+                            );
                         })
                     });
                 }

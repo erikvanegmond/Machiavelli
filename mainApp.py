@@ -1,4 +1,12 @@
 import tornado.web
+import mimetypes
+import os
+
+mimetypes.init()
+mimetypes.add_type("font/woff2", ".woff2")
+mimetypes.add_type("font/woff", ".woff")
+mimetypes.add_type("font/ttf", ".ttf")
+
 
 from game import game_state_controller
 
@@ -12,8 +20,11 @@ class StaticFiles(tornado.web.RequestHandler):
     def get(self, uri):
         root_path = "site/static/"
         path = root_path + uri
-        print("path: " + path)
-        self.render(path)
+        _, file_extension = os.path.splitext(path)
+        with open(path, 'rb') as f:
+            type = mimetypes.types_map[file_extension]
+            self.set_header("Content-Type", type + '; charset="utf-8"')
+            self.write(f.read())
 
 
 class GameState(tornado.web.RequestHandler):

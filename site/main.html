@@ -1,17 +1,25 @@
 <html>
 <head>
     <title>Machiavelli</title>
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="static/js/main.js"></script>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+
 </head>
 <body>
-    <button id="reset">Reset</button>
-    <button id="updateGameStateViewButton">Update View</button>
-    <button id="updateGameStateButton">Update Game State</button>
-    <hr/>
-    <div id="gameState">Game State</div>
-    <hr/>
-    <div id="actionForm">Form</div>
+    <div class="container">
+        <div class="row">
+            <button class="btn btn-danger" id="reset"><span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span> Reset</button>
+            <button class="btn btn-primary" id="updateGameStateViewButton"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Update View</button>
+            <button class="btn btn-success" id="updateGameStateButton"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Update Game State</button>
+        </div>
+        <hr/>
+        <div id="gameState">Game State</div>
+        <hr/>
+        <div id="actionForm">Form</div>
+    </div>
+    <!-- Scripts -->
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>
