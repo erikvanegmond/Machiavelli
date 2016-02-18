@@ -10,7 +10,6 @@ function updateGameStateView(){
                     $.each(data['actions'], function(k,v){
                         $( "#actionForm" ).html( "<form id='actionList"+k+"'></form>" );
                         $.each(v, function(n,c){
-                            console.log("actionList"+k);
                             $("#actionList"+k).append('<input type="radio" name="'+k+'" value="'+c+'">'+c+'</input>');
                         })
                     });

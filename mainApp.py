@@ -4,13 +4,15 @@ import game_state_controller
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("main.html")
+        self.render("site/main.html")
 
 
 class StaticFiles(tornado.web.RequestHandler):
-    def get(self, path):
+    def get(self, uri):
+        root_path = "site/static/"
+        path = root_path + uri
+        print("path: " + path)
         self.render(path)
-
 
 
 class GameState(tornado.web.RequestHandler):
