@@ -8,8 +8,10 @@ class Player:
         self.gold = 2
         self.hand = []
         self.city = []
+        self.temp_hand = []
         self.character = character.Character
         self.name = name
+        self.has_build = False
 
         self.draw_cards(4)
 
@@ -26,24 +28,45 @@ class Player:
             self.gold -= card.cost
             self.hand.remove(card)
             self.city.append(card)
+            self.has_build = True
             return True
         print("Can not build %s" % card)
         return False
 
-    def get_general_income(self):
+    def get_income_gold(self):
+        self.gold += 2
+
+    def get_income_card(self):
+        cards = []
+        for _ in range(2):
+            cards.append(deck.draw_card())
+        self.temp_hand = cards
+        return [x.name for x in cards]
+
+    def keep_income_card(self, card):
+        self.hand.append(card)
+
+    def get_character_income(self):
         color = self.character.get_color()
         for building in self.city:
             if building.color == color:
                 self.gold += 1
 
-    def get_turn_options(self):
-        options = []
-        if self.hand:
-            options.append("build")
-        special = self.character.special_abilities()
-        if special:
-            options += special
-        return options
+    def get_turn_actions(self):
+        actions = {}
+        if self.hand and not self.has_build:
+            actions["build"] = [x.name for x in self.hand]
+        # special = self.character.special_abilities()
+        # if special:
+        #     actions += special
+        return actions
+
+    def get_status(self):
+        status = {"name": self.name, "hand": [x.__repr__() for x in self.hand],
+                  "city": [x.__repr__() for x in self.city], "gold": self.gold}
+        if isinstance(self.character, character.Character):
+            status["character"] = self.character.character
+        return status
 
     def print_status(self):
         print("  name:", self.name)
@@ -56,6 +79,8 @@ class Player:
         return self.name
 
     def __str__(self):
+        if isinstance(self.character, character.Character):
+            return "{} ({})".format(self.name, self.character.character)
         return self.name
 
     def __eq__(self, other):
