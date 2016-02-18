@@ -1,3 +1,4 @@
+import json
 import tornado.web
 import mimetypes
 import os
@@ -70,8 +71,7 @@ class GameTakeAction(tornado.web.RequestHandler):
         self.write(response)  # TODO: Post action taken to game controller.
 
     def post(self):
-        data_string = self.request.body.decode('utf-8')
-        data = self.parse_data_string(data_string)
+        data = json.loads(self.request.body.decode('utf-8'))
         response = self.gsc.take_action(data)
         self.write(response)  # TODO: Post action taken to game controller.
 

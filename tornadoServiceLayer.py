@@ -66,8 +66,9 @@ class GSCPostArgHandler(tornado.web.RequestHandler):
     def post(self):
         data = json.loads(self.request.body.decode('utf-8'))
         method = getattr(gsc, self.state)
+        print(data)
         result = method(data)
-        self.write("Done")
+        self.write(result)
 
 
 class WSHandler(tornado.websocket.WebSocketHandler):

@@ -30,21 +30,19 @@ function update_screen(data) {
         });
         $( "#actionList"+k+"" ).submit(function( event ) {
             event.preventDefault();
-            post_form_action("#actionList"+k)
+            post_form_action("#actionList"+k+"select")
         });
     });
 }
 
 function post_form_action(id){
-    console.log('posting');
-    console.log(id);
-    var form_data = $(id).serializeArray();
-    console.log(form_data);
+    var sendData = {};
+    sendData[$(id).attr('name')] = $(id).val();
     $.ajax({
         type: "POST",
         url: 'game/action',
         datatype: 'json',
-        data: form_data, // serializes the form's elements.
+        data: JSON.stringify(sendData), // serializes the form's elements.
         contentType: 'application/json; charset=utf-8',
         success: function(data)
         {
