@@ -182,6 +182,8 @@ class GameStateController:
                 actions['pick_character'] = [x.character for x in self.get_possible_characters()]
             elif self.state == GameStates.turns_income:
                 actions['pick_income_type'] = ['gold', 'card']
+            elif self.state == GameStates.turns_general:
+                actions = self.current_player.get_turn_actions()
         return actions
 
     def take_action(self, action: dict):
@@ -229,3 +231,8 @@ class GameStateController:
         self.update_state()
         return self.get_state()
 
+    def build(self, chosen_building):
+        for i, b in enumerate(self.current_player.hand):
+            if b.name == chosen_building:
+                self.current_player.build(i)
+        return self.get_state()

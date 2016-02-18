@@ -11,6 +11,7 @@ class Player:
         self.temp_hand = []
         self.character = character.Character
         self.name = name
+        self.has_build = False
 
         self.draw_cards(4)
 
@@ -27,6 +28,7 @@ class Player:
             self.gold -= card.cost
             self.hand.remove(card)
             self.city.append(card)
+            self.has_build = True
             return True
         print("Can not build %s" % card)
         return False
@@ -50,14 +52,14 @@ class Player:
             if building.color == color:
                 self.gold += 1
 
-    def get_turn_options(self):
-        options = []
-        if self.hand:
-            options.append("build")
-        special = self.character.special_abilities()
-        if special:
-            options += special
-        return options
+    def get_turn_actions(self):
+        actions = {}
+        if self.hand and not self.has_build:
+            actions["build"] = [x.name for x in self.hand]
+        # special = self.character.special_abilities()
+        # if special:
+        #     actions += special
+        return actions
 
     def get_status(self):
         status = {"name": self.name, "hand": [x.__repr__() for x in self.hand],
