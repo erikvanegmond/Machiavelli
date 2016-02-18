@@ -56,6 +56,8 @@ class Player:
         return self.name
 
     def __str__(self):
+        if isinstance(self.character, character.Character):
+            return "{} ({})".format(self.name, self.character.character)
         return self.name
 
     def __eq__(self, other):
