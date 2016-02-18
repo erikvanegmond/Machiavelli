@@ -24,6 +24,9 @@ class Character:
         """
         if type(self) == type(other):
             return True
+        if isinstance(other, str):
+            if self.character == other:
+                return True
         return False
 
     def get_color(self):
