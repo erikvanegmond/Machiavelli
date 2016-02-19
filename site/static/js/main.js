@@ -10,15 +10,16 @@ function updateGameStateView(){
 
 function update_screen(data) {
     $( "#gameStateBody" ).html( "" );
-    var order = ['game_name', 'n_players', 'open_cards', 'n_open_cards', 'closed_cards', 'game_state', 'players', 'player_order', 'current_player',
-    'current_player_status', 'king_player'];
-    $.each(order, function(i, o){
+    $( "#playerStateBody" ).html( "" );
+    var gameorder = ['game_name', 'n_players', 'open_cards', 'n_open_cards', 'closed_cards', 'game_state', 'players', 'player_order'];
+    var playerorder = ['current_player',
+    'current_player_status', 'king_player']
+    $.each(gameorder, function(i, o){
         $("#gameStateBody").append('<tr><th scope="row">'+o+'</th><td>'+data['state'][o]+'</td></tr>');
-
     });
-//    $.each(data['state'], function(k,v){
-//        $("#gameStateBody").append('<tr><th scope="row">'+k+'</th><td>'+v+'</td></tr>');
-//    });
+    $.each(playerorder, function(i, o){
+        $("#playerStateBody").append('<tr><th scope="row">'+o+'</th><td>'+data['state'][o]+'</td></tr>');
+    });
     $( "#actionForm" ).html("");
     $.each(data['actions'], function(k,v){
         $( "#actionForm" ).html(
