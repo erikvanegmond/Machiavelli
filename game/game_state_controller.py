@@ -90,6 +90,7 @@ class GameStateController:
             self.take_open_cards()
             self.player_order = self.get_player_order()
             self.state = GameStates.rounds_pick_characters
+            self.update_state_rounds_pick_characters()
         elif self.state == GameStates.rounds_pick_characters:
             self.update_state_rounds_pick_characters()
         elif self.state == GameStates.turns_order_players:
@@ -120,12 +121,19 @@ class GameStateController:
             # TODO implement special case
             pass
         elif 4 <= self.n_players <= 7:
-            current_index = self.players.index(self.current_player)
-            if current_index + 1 == self.n_players:
+            if self.player_order:
+                next_player = self.player_order[0]
+                self.player_order.pop(0)
+                self.current_player = next_player
+            else:
                 self.state = GameStates.turns_order_players
                 self.current_player = Player
-            else:
-                self.current_player = self.players[current_index + 1]
+            # current_index = self.players.index(self.current_player)
+            # if current_index + 1 == self.n_players:
+            #     self.state = GameStates.turns_order_players
+            #     self.current_player = Player
+            # else:
+            #     self.current_player = self.players[current_index + 1]
             pass
         else:
             # Something not right with n_players
