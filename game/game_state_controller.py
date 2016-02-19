@@ -169,19 +169,20 @@ class GameStateController:
             state['king_player'] = self.king_player.__str__()
         return state
 
-    def get_state(self):
+    def get_state(self, message=""):
 
         state = self.get_game_state()
         actions = self.get_actions()
-        response = self.make_response(state, actions)
+        response = self.make_response(state, actions, message)
         return response
 
-    def make_response(self, state, actions):
+    def make_response(self, state, actions, message):
         response = {}
         if len(state) > 0:
             response['state'] = state
         if len(actions) > 0:
             response['actions'] = actions
+        response['message'] = message
         return response
 
     def get_actions(self):
@@ -197,9 +198,9 @@ class GameStateController:
 
     def take_action(self, action: dict):
         if len(action) > 1:
-            return "No action taken, more than one actions performed"
+            return self.get_state("No action taken, more than one actions performed")
         elif len(action) is 0:
-            return "No action taken, as none was performed"
+            return self.get_state("No action taken, as none was performed")
         else:
             chosen_action = list(action.keys())[0]
             method = getattr(self, chosen_action)
@@ -209,7 +210,7 @@ class GameStateController:
     def pick_character(self, chosen_character):
         possible_characters = self.get_possible_characters()
         if eval(chosen_character) not in possible_characters:
-            return "error, character {} not possible".format(chosen_character)
+            return self.get_state("error, character {} not possible".format(chosen_character))
         else:
             self.current_player.character = eval(chosen_character)(self.current_player)
             self.chosen_characters.append(eval(chosen_character))
@@ -243,7 +244,9 @@ class GameStateController:
     def build(self, chosen_building):
         for i, b in enumerate(self.current_player.hand):
             if b.name == chosen_building:
-                self.current_player.build(i)
+                result = self.current_player.build(i)
+                if result is not True:
+                    return self.get_state(result)
         return self.get_state()
 
     def character_income(self, picked):

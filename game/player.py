@@ -36,8 +36,7 @@ class Player:
             self.city.append(card)
             self.has_build = True
             return True
-        print("Can not build %s" % card)
-        return False
+        return "Can not build %s" % card
 
     def get_income_gold(self):
         self.gold += 2

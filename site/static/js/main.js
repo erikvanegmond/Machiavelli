@@ -40,6 +40,12 @@ function update_screen(data) {
             post_form_action("#actionList"+k+"select")
         });
     });
+
+    if(data['message'].length > 0){
+        $('#messageModalBody').html(data['message']);
+        $('#messageModal').modal('show');
+    }
+    console.log(data['message'].length);
 }
 
 function post_form_action(id){
@@ -76,7 +82,7 @@ $(document).ready(function(){
     $( "#updateGameStateViewButton" ).click(function(){updateGameStateView()});
     $( "#updateGameStateButton" ).click(function(){updateGameState()});
     $( "#reset" ).click(function(){reset()});
-    updateGameState();
+    updateGameStateView();
 
 
 });
