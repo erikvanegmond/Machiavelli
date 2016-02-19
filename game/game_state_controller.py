@@ -87,6 +87,7 @@ class GameStateController:
                 if player.character == "King":
                     self.king_player = player
                 player.character = Character
+                player.new_turn()
             self.take_open_cards()
             self.player_order = self.get_player_order()
             self.state = GameStates.rounds_pick_characters
@@ -243,4 +244,9 @@ class GameStateController:
         for i, b in enumerate(self.current_player.hand):
             if b.name == chosen_building:
                 self.current_player.build(i)
+        return self.get_state()
+
+    def character_income(self, picked):
+        if picked == 'yes':
+            self.current_player.get_character_income()
         return self.get_state()

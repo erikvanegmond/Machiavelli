@@ -12,8 +12,14 @@ class Player:
         self.character = character.Character
         self.name = name
         self.has_build = False
+        self.has_character_income = False
 
         self.draw_cards(4)
+
+    def new_turn(self):
+        self.has_build = False
+        self.has_character_income = False
+
 
     def draw_cards(self, number_of_cards):
         for _ in range(number_of_cards):
@@ -56,9 +62,8 @@ class Player:
         actions = {}
         if self.hand and not self.has_build:
             actions["build"] = [x.name for x in self.hand]
-        # special = self.character.special_abilities()
-        # if special:
-        #     actions += special
+        if self.character.get_color() is not 'grey' and not self.has_character_income:
+            actions["character_income"] = ['yes']
         return actions
 
     def get_status(self):
