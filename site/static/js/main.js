@@ -45,7 +45,6 @@ function update_screen(data) {
         $('#messageModalBody').html(data['message']);
         $('#messageModal').modal('show');
     }
-    console.log(data['message'].length);
 }
 
 function post_form_action(id){

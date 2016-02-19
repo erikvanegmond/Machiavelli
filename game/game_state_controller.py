@@ -176,7 +176,7 @@ class GameStateController:
         response = self.make_response(state, actions, message)
         return response
 
-    def make_response(self, state, actions, message):
+    def make_response(self, state, actions, message=""):
         response = {}
         if len(state) > 0:
             response['state'] = state
