@@ -9,10 +9,16 @@ function updateGameStateView(){
 };
 
 function update_screen(data) {
-    $( "#gameState" ).html( "<ul id='gameList'></ul>" );
-    $.each(data['state'], function(k,v){
-        $("#gameList").append('<li>'+k+' - '+v+'</li>');
+    $( "#gameStateBody" ).html( "" );
+    var order = ['game_name', 'n_players', 'open_cards', 'n_open_cards', 'closed_cards', 'game_state', 'players', 'player_order', 'current_player',
+    'current_player_status', 'king_player'];
+    $.each(order, function(i, o){
+        $("#gameStateBody").append('<tr><th scope="row">'+o+'</th><td>'+data['state'][o]+'</td></tr>');
+
     });
+//    $.each(data['state'], function(k,v){
+//        $("#gameStateBody").append('<tr><th scope="row">'+k+'</th><td>'+v+'</td></tr>');
+//    });
     $( "#actionForm" ).html("");
     $.each(data['actions'], function(k,v){
         $( "#actionForm" ).html(

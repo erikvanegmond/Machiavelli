@@ -12,7 +12,17 @@
             <button class="btn btn-success" id="updateGameStateButton"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Update Game State</button>
         </div>
         <hr/>
-        <div id="gameState">Game State</div>
+        <div id="gameState">Game State
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col-md-2">Var</th>
+                    <th class="col-md-10">Value</th>
+                </tr>
+            </thead>
+            <tbody id="gameStateBody"></tbody>
+        </table>
+        </div>
         <hr/>
         <div id="actionForm">Form</div>
     </div>
