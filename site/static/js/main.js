@@ -22,7 +22,7 @@ function update_screen(data) {
     });
     $( "#actionForm" ).html("");
     $.each(data['actions'], function(k,v){
-        $( "#actionForm" ).html(
+        $( "#actionForm" ).append(
             "<form class='form-inline actionForm' id='actionList"+k+"'>"+
             "<div class='form-group'><label for='actionList"+k+"select'>"+k+"</label> "+
             "<select id='actionList"+k+"select' name='"+k+"' class='form-control'></select>"+
