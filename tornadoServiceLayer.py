@@ -53,22 +53,23 @@ class GSCPostHandler(tornado.web.RequestHandler):
         self.state = state
 
     def post(self):
-        self.set_header("Content-Type", "application/json; charset=UTF-8")
-        method = getattr(gsc, self.state)
-        result = method()
-        self.write("Done")
-
-
-class GSCPostArgHandler(tornado.web.RequestHandler):
-    def initialize(self, state):
-        self.state = state
-
-    def post(self):
-        data = json.loads(self.request.body.decode('utf-8'))
-        method = getattr(gsc, self.state)
-        print(data)
-        result = method(data)
-        self.write(result)
+        try:
+            data = json.loads(self.request.body.decode('utf-8'))
+            print(data)
+            method = getattr(gsc, self.state)
+            result = method(data)
+        except json.JSONDecodeError:
+            self.set_status(422)
+            self.write("Invalid JSON data")
+        except AttributeError:
+            self.set_status(422)
+            self.write("Invalid method")
+        except:
+            self.set_status(500)
+            self.write("Unexpected server error")
+        else:
+            self.set_header("Content-Type", "application/json; charset=UTF-8")
+            self.write(result)
 
 
 class WSHandler(tornado.websocket.WebSocketHandler):
@@ -99,7 +100,7 @@ class Application(tornado.web.Application):
             (r"/game/state", GSCGetHandler, dict(state='get_state')),
             (r"/game/update", GSCPostHandler, dict(state='update_state')),
             (r"/reset", GSCPostHandler, dict(state='reset')),
-            (r"/game/action", GSCPostArgHandler, dict(state='take_action')),
+            (r"/game/action", GSCPostHandler, dict(state='take_action')),
             (r"/game/connect", WSHandler),
             (r"/static/(.*)", FileHandler)
         ]
