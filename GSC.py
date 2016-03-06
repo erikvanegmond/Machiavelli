@@ -1,12 +1,14 @@
 class GameStateController:
-    FUNCTIONS = {'GET_STATE': 'getState'}
-    CONSTS = {'SUCSES': 'sucses',
+    ACTIONS = {'pickcharacter': 'get_state'}
+    CONSTS = {'SUCCESS': 'success',
               'FAILURE': 'failure'}
 
-    def getState(self):
-        return 'GET Game State'
+    def get_state(self):
+        return {status: CONSTS['SUCCESS'], data: {state: 'something'}}
 
-    def execute(self, state):
-        method = getattr(self, self.FUNCTIONS[state])
-        result = method()
-        return result
+    def preform_action(self, data):
+        action = data.action
+        print(action)
+        if action not in d:
+            return {status: CONSTS['FAILURE'], reason: 'Action not allowed'}
+        return getattr(self, ACTIONS[action])
