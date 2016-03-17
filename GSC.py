@@ -3,8 +3,11 @@ class GameStateController:
     CONSTS = {'SUCCESS': 'success',
               'FAILURE': 'failure'}
 
-    def get_state(self):
-        return {status: CONSTS['SUCCESS'], data: {state: 'something'}}
+    def __init__(self):
+        pass
+
+    def get_state(self, gameid, user):
+        return {'status': self.CONSTS['SUCCESS'], 'data': {'gameid': gameid, 'user': user}}
 
     def preform_action(self, data):
         action = data.action
