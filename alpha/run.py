@@ -1,18 +1,27 @@
 from tornado import web
 from tornado import ioloop
-import pprint
 
 # Configuration Handling.
 # TODO Use ConfigParser to handle configurations.
 PORT = 8080
 
+from GSC import GameStateController
+
+gsc = GameStateController()
+
 
 class GameHandler(web.RequestHandler):
+    def initialize(self):
+        self.username = "iemand"
+        self.requestobject={}
+
     def get(self, gameid):
         print(gameid)
+        GameStateController.get_state(gameid, self.username, self.requestobject)
 
     def post(self, gameid):
         print(gameid)
+        GameStateController.take_action(gameid, self.username, self.requestobject)
 
 
 class FileHandler(web.StaticFileHandler):
@@ -35,12 +44,11 @@ class NotFoundHandler(web.RequestHandler):
 class Application(web.Application):
     def __init__(self):
         handlers = [
-            # (r"/game/(.*)", GSCHandler),
-            # (r"/()", FileHandler, {"path": "site/static/html/main.html"}),
-            # (r"/login", LoginHandler),
             (r"/game/([a-z]+)", GameHandler),
-            (r"/image/((?:[a-z]+\/)*[a-z0-9]+\.[a-z0-9]+)", FileHandler,
+            (r"/image/((?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)", FileHandler,
                 {"path": "images", "error_message": "Image not found."}),
+            (r"/((?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)", FileHandler,
+                {"path": "site/html", "error_message": "Path not found."}),
             (r".*", NotFoundHandler)
         ]
         settings = {
