@@ -16,16 +16,14 @@ class GameHandler(web.RequestHandler):
         self.requestobject={}
 
     def get(self, gameid):
-        print(gameid)
         GameStateController.get_state(gameid, self.username, self.requestobject)
 
     def post(self, gameid):
-        print(gameid)
         GameStateController.take_action(gameid, self.username, self.requestobject)
 
 
 class FileHandler(web.StaticFileHandler):
-    def initialize(self, path, default_filename=None, error_message="site/html/errors/defaultError.html"):
+    def initialize(self, path, default_filename=None, error_message="File not found."):
         self.root = path
         self.default_filename = default_filename
         self.error_message = error_message
@@ -49,12 +47,11 @@ class Application(web.Application):
                 {"path": "images", "error_message": "Image not found."}),
             (r"/((?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)", FileHandler,
                 {"path": "site/html", "error_message": "Path not found."}),
+            (r"/()", FileHandler, {"path": "site/html", "default_filename": "index.html"}),
             (r".*", NotFoundHandler)
         ]
         settings = {
-            "debug": True,
-            "cookie_secret": "__TODO:_GENERATassd@#$@#($&!@KDF*YROIHE_YOUR_OWN_RANDOM_VALUE_HERE__",
-            "login_url": "/login"
+            "debug": True
         }
         web.Application.__init__(self, handlers, **settings)
 
